@@ -372,6 +372,22 @@ with open('hardcore.js', 'w') as f:
         f.write("]")
         f.write(',"nature":"' + mon.nature + '"')
         f.write(',"item":"' + itemDict.itemdict[mon.item] + '"')
-        f.write (',"ivs":{"hp:":' + mon.hpiv + ',"at":' + mon.atkiv+ ',"sa":' + mon.spaiv + ',"sp":' + mon.speiv + ',"df":' + mon.defiv + ',"sd":' + mon.spdiv + "}")
-        f.write("},")
+        if (mon.hpiv != 31 or mon.atkiv != 31 or mon.spaiv != 31 or mon.speiv != 31 or mon.defiv != 31 or mon.spdiv != 31):
+            f.write (',"ivs":{')
+            if mon.hpiv != 31:
+                f.write('"hp:":' + mon.hpiv)
+            if mon.atkiv != 31:
+                f.write(',"at":' + mon.atkiv)
+            if mon.spaiv != 31:
+                f.write(',"at":' + mon.spaiv)
+            if mon.speiv != 31:
+                f.write(',"at":' + mon.speiv)
+            if mon.defiv != 31:
+                f.write(',"at":' + mon.defiv)
+            if mon.spdiv != 31:
+                f.write(',"at":' + mon.spdiv)
+            f.write('}},')
+
+        #f.write(',"ivs":{"hp:":' + mon.hpiv + ',"at":' + mon.atkiv+ ',"sa":' + mon.spaiv + ',"sp":' + mon.speiv + ',"df":' + mon.defiv + ',"sd":' + mon.spdiv + "}")
+        #f.write("},")
     f.write("}};")
