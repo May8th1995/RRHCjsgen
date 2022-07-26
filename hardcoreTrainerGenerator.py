@@ -282,7 +282,7 @@ for mon in mons:
     elif mon.item == 'ITEM_CENTISKITE':
         if mon.species == 'SPECIES_CENTISKORCH':
             mon.species = 'SPECIES_CENTISKORCH_GIGA'
-        elif mon.species == 'SPECIES_CENTISKORCH':
+        elif mon.species == 'SPECIES_CENTISKORCH_S':
             mon.species = 'SPECIES_CENTISKORCH_S_MEGA'
 
 
