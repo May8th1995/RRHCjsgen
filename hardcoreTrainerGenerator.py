@@ -5,12 +5,6 @@ import dicts.movesDict as moveDict
 import dicts.speciesDict as speciesDict
 import dicts.nameDict as nameDict
 
-#Get safe calc data to match to
-
-ability_file = open('data/calcAbilityNames.txt', 'r')
-abilities = ability_file.readlines()
-ability_file.close
-
 #set up species->ability dictionary
 
 base_stats = open('data/Base_Stats.c', 'r')
