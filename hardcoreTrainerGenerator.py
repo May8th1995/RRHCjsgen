@@ -4,6 +4,44 @@ import dicts.levelDict as levelDict
 import dicts.movesDict as moveDict
 import dicts.speciesDict as speciesDict
 import dicts.nameDict as nameDict
+import math
+
+def gethpmove(mon):
+    hptype = ((int(mon.hpiv)%2 + (2*(int(mon.atkiv)%2))+(4*(int(mon.defiv)%2))+(8*(int(mon.speiv)%2))+(16*(int(mon.spaiv)%2))+(32*(int(mon.spdiv)%2)))*5)/21
+    hptype = math.floor(hptype)
+    match hptype:
+        case 0:
+            return "Hidden Power Fighting"
+        case 1:
+            return "Hidden Power Flying"
+        case 2:
+            return "Hidden Power Poison"
+        case 3:
+            return "Hidden Power Ground"
+        case 4:
+            return "Hidden Power Rock"
+        case 5:
+            return "Hidden Power Bug"
+        case 6:
+            return "Hidden Power Ghost"
+        case 7:
+            return "Hidden Power Steel"
+        case 8:
+            return "Hidden Power Fire"
+        case 9:
+            return "Hidden Power Water"
+        case 10:
+            return "Hidden Power Grass"
+        case 11:
+            return "Hidden Power Electric"
+        case 12:
+            return "Hidden Power Psychic"
+        case 13:
+            return "Hidden Power Ice"
+        case 14:
+            return "Hidden Power Dragon"
+        case 15:
+            return "Hidden Power Dark"
 
 #set up species->ability dictionary
 
@@ -326,6 +364,15 @@ for mon in mons:
         if mon.move1 == 'MOVE_DRAGONASCENT' or mon.move2 == 'MOVE_DRAGONASCENT' or mon.move3 == 'MOVE_DRAGONASCENT' or mon.move4 == 'MOVE_DRAGONASCENT':
             mon.species = 'SPECIES_RAYQUAZA_MEGA'
 
+    if mon.move1 == 'MOVE_HIDDENPOWER':
+        mon.move1 = gethpmove(mon)
+    if mon.move2 == 'MOVE_HIDDENPOWER':
+        mon.move2 = gethpmove(mon)
+    if mon.move3 == 'MOVE_HIDDENPOWER':
+        mon.move3 = gethpmove(mon)
+    if mon.move4 == 'MOVE_HIDDENPOWER':
+        mon.move4 = gethpmove(mon)
+
 for mon in mons:
     if mon.level == 'PLAYER_MAX_LEVEL':
         mon.level = str(levelDict.leveldict[mon.name])
@@ -336,6 +383,23 @@ for mon in mons:
     elif mon.level == 'THREE_BELOW_PLAYER_MAX_LEVEL':
         mon.level = str(levelDict.leveldict[mon.name]-3)
 
+for mon in mons:
+    if(mon.ability == "FRONTIER_ABILITY_1"):
+        mon.ability = abilityDict.abiltiesdict[ability_dict[mon.species][0]]
+    elif(mon.ability == "FRONTIER_ABILITY_2"):
+        if(abilityDict.abiltiesdict[ability_dict[mon.species][1]] == ''):
+            mon.ability = abilityDict.abiltiesdict[ability_dict[mon.species][0]]
+        else:
+            mon.ability = abilityDict.abiltiesdict[ability_dict[mon.species][1]]
+    elif(mon.ability == "FRONTIER_ABILITY_HIDDEN"):
+        print(abilityDict.abiltiesdict[ability_dict[mon.species][2]])
+        if(abilityDict.abiltiesdict[ability_dict[mon.species][2]] == ''):
+            mon.ability = abilityDict.abiltiesdict[ability_dict[mon.species][0]]
+        else:
+            mon.ability = abilityDict.abiltiesdict[ability_dict[mon.species][2]]
+
+
+
 prevSpecies = ""
 with open('hardcore.js', 'w') as f:
     f.write("var SETDEX_SS = {")
@@ -344,16 +408,10 @@ with open('hardcore.js', 'w') as f:
             if prevSpecies != "":
                 f.write("},\n")
             prevSpecies = mon.species
-            print(mon.species)
             f.write('"' + speciesDict.speciesdict[mon.species] + '":{')
         f.write('"' + nameDict.namedict[mon.name] +'":{')
         f.write('"level":' + mon.level)
-        if(mon.ability == "FRONTIER_ABILITY_1"):
-            f.write(',"Ability":"' + abilityDict.abiltiesdict[ability_dict[mon.species][0]] + '"')
-        if(mon.ability == "FRONTIER_ABILITY_2"):
-            f.write(',"Ability":"' + abilityDict.abiltiesdict[ability_dict[mon.species][1]] + '"')
-        if(mon.ability == "FRONTIER_ABILITY_HIDDEN"):
-            f.write(',"Ability":"' + abilityDict.abiltiesdict[ability_dict[mon.species][2]] + '"')
+        f.write(',"Ability":"' + mon.ability + '"')
         f.write(',"moves":[')
         if moveDict.movedict[mon.move1] != "":
             f.write('"'+ moveDict.movedict[mon.move1]+'"')
@@ -366,21 +424,22 @@ with open('hardcore.js', 'w') as f:
         f.write("]")
         f.write(',"nature":"' + mon.nature + '"')
         f.write(',"item":"' + itemDict.itemdict[mon.item] + '"')
-        if (mon.hpiv != 31 or mon.atkiv != 31 or mon.spaiv != 31 or mon.speiv != 31 or mon.defiv != 31 or mon.spdiv != 31):
+        if (mon.hpiv != "31" or mon.atkiv != "31" or mon.spaiv != "31" or mon.speiv != "31" or mon.defiv != "31" or mon.spdiv != "31"):
             f.write (',"ivs":{')
-            if mon.hpiv != 31:
+            if mon.hpiv != "31":
                 f.write('"hp:":' + mon.hpiv)
-            if mon.atkiv != 31:
-                f.write(',"at":' + mon.atkiv)
-            if mon.spaiv != 31:
-                f.write(',"at":' + mon.spaiv)
-            if mon.speiv != 31:
-                f.write(',"at":' + mon.speiv)
-            if mon.defiv != 31:
-                f.write(',"at":' + mon.defiv)
-            if mon.spdiv != 31:
-                f.write(',"at":' + mon.spdiv)
-            f.write('}},')
+            if mon.atkiv != "31":
+                f.write('"at":' + mon.atkiv + ',')
+            if mon.spaiv != "31":
+                f.write('"sa":' + mon.spaiv + ',')
+            if mon.speiv != "31":
+                f.write('"sp":' + mon.speiv + ',')
+            if mon.defiv != "31":
+                f.write('"df":' + mon.defiv + ',')
+            if mon.spdiv != "31":
+                f.write('"sd":' + mon.spdiv + ',')
+            f.write('}')
+        f.write('},')
 
         #f.write(',"ivs":{"hp:":' + mon.hpiv + ',"at":' + mon.atkiv+ ',"sa":' + mon.spaiv + ',"sp":' + mon.speiv + ',"df":' + mon.defiv + ',"sd":' + mon.spdiv + "}")
         #f.write("},")
