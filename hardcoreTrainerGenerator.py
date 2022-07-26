@@ -131,8 +131,6 @@ for lines in trainers:
     if '.modifyMovesDoubles' in lines  and  nameDict.namedict[name] != "???":
         mons.append(Mon(name, species, nature, level, hpiv, atkiv, defiv, spaiv, spdiv, speiv, ability, item, move1, move2, move3, move4))
 
-mons.sort(key=lambda x: x.species)
-
 #check formes
 
 for mon in mons:
@@ -392,13 +390,12 @@ for mon in mons:
         else:
             mon.ability = abilityDict.abiltiesdict[ability_dict[mon.species][1]]
     elif(mon.ability == "FRONTIER_ABILITY_HIDDEN"):
-        print(abilityDict.abiltiesdict[ability_dict[mon.species][2]])
         if(abilityDict.abiltiesdict[ability_dict[mon.species][2]] == ''):
             mon.ability = abilityDict.abiltiesdict[ability_dict[mon.species][0]]
         else:
             mon.ability = abilityDict.abiltiesdict[ability_dict[mon.species][2]]
 
-
+mons.sort(key=lambda x: x.species)
 
 prevSpecies = ""
 with open('hardcore.js', 'w') as f:
