@@ -408,7 +408,7 @@ with open('hardcore.js', 'w') as f:
             f.write('"' + speciesDict.speciesdict[mon.species] + '":{')
         f.write('"' + nameDict.namedict[mon.name] +'":{')
         f.write('"level":' + mon.level)
-        f.write(',"Ability":"' + mon.ability + '"')
+        f.write(',"ability":"' + mon.ability + '"')
         f.write(',"moves":[')
         if moveDict.movedict[mon.move1] != "":
             f.write('"'+ moveDict.movedict[mon.move1]+'"')
