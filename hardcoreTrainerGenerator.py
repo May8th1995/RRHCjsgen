@@ -395,6 +395,9 @@ for mon in mons:
         else:
             mon.ability = abilityDict.abiltiesdict[ability_dict[mon.species][2]]
 
+
+for mon in mons:
+    mon.species = speciesDict.speciesdict[mon.species]
 mons.sort(key=lambda x: x.species)
 
 prevSpecies = ""
@@ -405,7 +408,7 @@ with open('hardcore.js', 'w') as f:
             if prevSpecies != "":
                 f.write("},\n")
             prevSpecies = mon.species
-            f.write('"' + speciesDict.speciesdict[mon.species] + '":{')
+            f.write('"' + mon.species + '":{')
         f.write('"' + nameDict.namedict[mon.name] +'":{')
         f.write('"level":' + mon.level)
         f.write(',"ability":"' + mon.ability + '"')
