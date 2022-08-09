@@ -1280,7 +1280,7 @@ speciesdict = {
     "SPECIES_URSALUNA" : "Ursaluna",
     "SPECIES_LILLIGANT_H" : "Lilligant-Hisui",
     "SPECIES_SNEASEL_H" : "Sneasel-Hisui",
-    "SPECIES_SNEASLER" : "Sneaseler",
+    "SPECIES_SNEASLER" : "Sneasler",
     "SPECIES_BASCULEGION_F" : "Basculegion-F",
     "SPECIES_QWILFISH_H" : "Qwilfish-Hisui",
     "SPECIES_OVERQWIL" : "Overqwil",
