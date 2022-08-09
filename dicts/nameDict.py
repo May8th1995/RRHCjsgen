@@ -12,7 +12,7 @@ namedict = {
     'CeruleanGary Squirtle' : "Gary - Nugget Bridge [Squirtle]",
     'CeruleanGary Bulbasaur' : "Gary - Nugget Bridge [Bulbasaur]",
     'CeruleanGary Charmander' : "Gary - Nugget Bridge [Charmander]",
-    'NuggetBridge Rocket' : "Nugget Grunt - Nugger Bridge",
+    'NuggetBridge Rocket' : "Nugget Grunt - Nugget Bridge",
     'Route24 Bugsy' : "Bugsy - Pre Surge - Route 25", 
     'Route24 BugsyPostSurge' : "Bugsy - Post Surge - Route 25", 
     'Misty1' : "Misty - Cerulean Gym",
