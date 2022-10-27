@@ -255,4 +255,5 @@ abiltiesdict = {
     "ABILITY_SCREENCLEANER" : "Screen Cleaner",
     "ABILITY_PASTELVEIL" : "Pastel Veil",
     "ABILITY_SAGEPOWER" : "Sage Power",
+    "ABILITY_PHOENIXDOWN" : "Phoenix Down",
 }

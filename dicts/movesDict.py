@@ -949,4 +949,5 @@ movedict = {
     "Hidden Power Ice" : "Hidden Power Ice",
     "Hidden Power Dragon" : "Hidden Power Dragon",
     "Hidden Power Dark" : "Hidden Power Dark",
+    "MOVE_MOUNTAINGALE" : "Mountain Gale",
 }
