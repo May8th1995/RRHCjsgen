@@ -1573,7 +1573,7 @@ static const struct BattleTowerSpread sNormalBossBattle_Route13_Trainer3[] =
 	{
 		.species = SPECIES_TANGROWTH,
 		.nature = NATURE_TIMID,
-		.level =  THREE_BELOW_PLAYER_MAX_LEVEL,
+		.level = THREE_BELOW_PLAYER_MAX_LEVEL,
 		.hpIv = 31,
 		.atkIv = 30,
 		.defIv = 31,

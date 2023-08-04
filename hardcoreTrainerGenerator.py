@@ -449,7 +449,7 @@ with open(file, 'w') as f:
         if (mon.hpiv != "31" or mon.atkiv != "31" or mon.spaiv != "31" or mon.speiv != "31" or mon.defiv != "31" or mon.spdiv != "31"):
             f.write (',"ivs":{')
             if mon.hpiv != "31":
-                f.write('"hp:":' + mon.hpiv)
+                f.write('"hp:":' + mon.hpiv + ',')
             if mon.atkiv != "31":
                 f.write('"at":' + mon.atkiv + ',')
             if mon.spaiv != "31":
