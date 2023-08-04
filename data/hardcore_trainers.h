@@ -436,9 +436,9 @@ static const struct BattleTowerSpread sExpertBossBattle_Falkner_Battle1[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_EMOLGA,
-		.nature = NATURE_BASHFUL,
-		.level = TWO_BELOW_PLAYER_MAX_LEVEL,
+		.species = SPECIES_WATTREL,
+		.nature = NATURE_MODEST,
+		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
 		.atkIv = 31,
 		.defIv = 31,
@@ -446,11 +446,11 @@ static const struct BattleTowerSpread sExpertBossBattle_Falkner_Battle1[] =
 		.spDefIv = 30,
 		.spdIv = 31,
 		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY_LIGHTNINGROD
-		.item = ITEM_ORAN_BERRY,
+		.item = ITEM_BERRY_JUICE,
 		.moves =
 		{
-			MOVE_SHOCKWAVE,
-			MOVE_AIRCUTTER,
+			MOVE_VOLTSWITCH,
+			MOVE_AIRSLASH,
 			MOVE_HIDDENPOWER, //ground
 			MOVE_SLEEPTALK,
 		},
@@ -475,8 +475,8 @@ static const struct BattleTowerSpread sExpertBossBattle_Falkner_Battle1[] =
 		{
 			MOVE_MEGADRAIN,
 			MOVE_ANCIENTPOWER,
-			MOVE_HIDDENPOWER, //bug
-			MOVE_AIRCUTTER,
+			MOVE_HIDDENPOWER, //bug 
+			MOVE_AIRCUTTER, 
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
 		.forSingles = TRUE,
@@ -484,7 +484,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Falkner_Battle1[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_RUFFLET,
+		.species = SPECIES_SQUAWKABILLY,
 		.nature = NATURE_BASHFUL,
 		.level = TWO_BELOW_PLAYER_MAX_LEVEL,
 		.hpIv = 31,
@@ -493,14 +493,14 @@ static const struct BattleTowerSpread sExpertBossBattle_Falkner_Battle1[] =
 		.spAtkIv = 0,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Hustle
-		.item = ITEM_SHARP_BEAK,
+		.ability = FRONTIER_ABILITY_2, //ABILITY Hustle
+		.item = ITEM_MUSCLE_BAND,
 		.moves =
 		{
 			MOVE_AERIALACE,
-			MOVE_SLASH,
-			MOVE_ROCKSMASH,
-			MOVE_ROOST,
+			MOVE_QUICKATTACK,
+			MOVE_REVERSAL,
+			MOVE_PARTINGSHOT,
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
 		.forSingles = TRUE,
@@ -656,25 +656,25 @@ static const struct BattleTowerSpread sExpertBossBattle_Brock_Battle1[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_SANDSHREW,
-		.nature = NATURE_BASHFUL,
-		.level = 14,
+		.species = SPECIES_VAROOM,
+		.nature = NATURE_CAREFUL,
+		.level = 15,
 		.hpIv = 31,
 		.atkIv = 31,
 		.defIv = 31,
 		.spAtkIv = 31,
 		.spDefIv = 31,
-		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY sand rush
-		.item = ITEM_SOFT_SAND,
+		.spdIv = 0,
+		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Filter
+		.item = ITEM_AIR_BALLOON,
 		.moves =
 		{
 			MOVE_BULLDOZE,
-			MOVE_ROCKTOMB,
-			MOVE_AERIALACE,
-			MOVE_SLEEPTALK,
+			MOVE_GYROBALL,
+			MOVE_TOXIC,
+			MOVE_PROTECT,
 		},
-		.ball = BALL_TYPE_ULTRA_BALL,
+		.ball = BALL_TYPE_GREAT_BALL,
 		.forSingles = TRUE,
 		.forDoubles = TRUE,
 		.modifyMovesDoubles = FALSE,
@@ -784,7 +784,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Route3_LassMiniBoss[] =
 static const struct BattleTowerSpread sExpertBossBattle_MtMoon_Archer[] =
 {
 	{
-		.species = SPECIES_SOLROCK,
+		.species = SPECIES_GLIMMET,
 		.nature = NATURE_BASHFUL,
 		.level = THREE_BELOW_PLAYER_MAX_LEVEL,
 		.hpIv = 31,
@@ -793,14 +793,14 @@ static const struct BattleTowerSpread sExpertBossBattle_MtMoon_Archer[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Levitate
-		.item = ITEM_HARD_STONE,
+		.ability = FRONTIER_ABILITY_1, //ABILITY Toxic Debris
+		.item = ITEM_SHUCA_BERRY,
 		.moves =
 		{
-			MOVE_STEALTHROCK,
-			MOVE_ROCKTOMB, 
-			MOVE_ZENHEADBUTT,
-			MOVE_SELFDESTRUCT,
+			MOVE_ANCIENTPOWER,
+			MOVE_VENOSHOCK, 
+			MOVE_MUDSHOT,
+			MOVE_PROTECT,
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
 		.forSingles = TRUE,
@@ -1786,7 +1786,7 @@ static const struct BattleTowerSpread sHardcoreBossBattle_NuggetBridge_Trainer5[
 //Picnicker Trainer Singles
 {
 	{
-		.species = SPECIES_CRABRAWLER,
+		.species = SPECIES_MABOSSTIFF,
 		.nature = NATURE_BASHFUL,
 		.level = TWO_BELOW_PLAYER_MAX_LEVEL,
 		.hpIv = 31,
@@ -1795,14 +1795,14 @@ static const struct BattleTowerSpread sHardcoreBossBattle_NuggetBridge_Trainer5[
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Hyper Cutter
-		.item = ITEM_BLACK_BELT,
+		.ability = FRONTIER_ABILITY_1, //ABILITY Intimidate
+		.item = ITEM_BLACK_GLASSES,
 		.moves =
 		{
-			MOVE_KNOCKOFF,
-			MOVE_ROCKSMASH, 
-			MOVE_ROCKTOMB,
-			MOVE_FACADE,
+			MOVE_TRAILBLAZE,
+			MOVE_BITE, 
+			MOVE_FIREFANG,
+			MOVE_ICEFANG,
 		},
 		.ball = BALL_TYPE_POKE_BALL,
 		.forSingles = TRUE,
@@ -1971,14 +1971,14 @@ static const struct BattleTowerSpread sExpertBossBattle_Route24_Bugsy[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_2, //ABILITY Technician
+		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Sharpness
 		.item = ITEM_FOCUS_SASH,
 		.moves =
 		{
-			MOVE_ROCKBLAST,
+			MOVE_XSCISSOR,
 			MOVE_UTURN, 
-			MOVE_STEALTHROCK,
-			MOVE_BULLDOZE,
+			MOVE_STONEAXE,
+			MOVE_NIGHTSLASH,
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
 		.forSingles = TRUE,
@@ -2034,7 +2034,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Route24_Bugsy[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_HERACROSS,
+		.species = SPECIES_LOKIX,
 		.nature = NATURE_JOLLY,
 		.level = 23,
 		.hpIv = 31,
@@ -2043,16 +2043,16 @@ static const struct BattleTowerSpread sExpertBossBattle_Route24_Bugsy[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Moxie
-		.item = ITEM_COBA_BERRY, 
+		.ability = FRONTIER_ABILITY_2, //ABILITY Tinted Lens
+		.item = ITEM_SILVER_POWDER, 
 		.moves =
 		{
-			MOVE_BUGBITE,
-			MOVE_BRICKBREAK, 
-			MOVE_ROCKTOMB,
-			MOVE_BULLETSEED, 
+			MOVE_UTURN,
+			MOVE_FIRSTIMPRESSION, 
+			MOVE_SUCKERPUNCH,
+			MOVE_KNOCKOFF, 
 		},
-		.ball = BALL_TYPE_GREAT_BALL,
+		.ball = BALL_TYPE_DUSK_BALL,
 		.forSingles = TRUE,
 		.forDoubles = TRUE,
 		.modifyMovesDoubles = FALSE,
@@ -2120,14 +2120,14 @@ static const struct BattleTowerSpread sExpertBossBattle_Route24_BugsyPostSurge[]
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_2, //ABILITY Technician
+		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Sharpness
 		.item = ITEM_FOCUS_SASH,
 		.moves =
 		{
-			MOVE_STEALTHROCK,
-			MOVE_ROCKBLAST, 
+			MOVE_STONEAXE,
+			MOVE_XSCISSOR, 
 			MOVE_UTURN,
-			MOVE_BULLDOZE,
+			MOVE_NIGHTSLASH,
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
 		.forSingles = TRUE,
@@ -2183,7 +2183,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Route24_BugsyPostSurge[]
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_HERACROSS,
+		.species = SPECIES_LOKIX,
 		.nature = NATURE_JOLLY,
 		.level = 23,
 		.hpIv = 31,
@@ -2192,14 +2192,14 @@ static const struct BattleTowerSpread sExpertBossBattle_Route24_BugsyPostSurge[]
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Moxie
-		.item = ITEM_COBA_BERRY, 
+		.ability = FRONTIER_ABILITY_2, //ABILITY Tinted Lens
+		.item = ITEM_BUG_GEM, 
 		.moves =
 		{
-			MOVE_MEGAHORN,
-			MOVE_CLOSECOMBAT, 
-			MOVE_STONEEDGE,
-			MOVE_BULLETSEED, 
+			MOVE_FIRSTIMPRESSION,
+			MOVE_UTURN, 
+			MOVE_KNOCKOFF,
+			MOVE_SUCKERPUNCH, 
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
 		.forSingles = TRUE,
@@ -2331,22 +2331,22 @@ static const struct BattleTowerSpread sExpertBossBattle_Misty1[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_FERROSEED,
-		.nature = NATURE_SASSY,
-		.level = 27,
+		.species = SPECIES_CLODSIRE,
+		.nature = NATURE_CAREFUL,
+		.level = 28,
 		.hpIv = 31,
 		.atkIv = 31,
 		.defIv = 31,
 		.spAtkIv = 31,
 		.spDefIv = 31,
-		.spdIv = 0,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Iron Barbs
-		.item = ITEM_EVIOLITE, 
+		.spdIv = 31,
+		.ability = FRONTIER_ABILITY_2, //ABILITY Water Absorb
+		.item = ITEM_BLACK_SLUDGE, 
 		.moves =
 		{
-			MOVE_BULLETSEED,
-			MOVE_GYROBALL, 
-			MOVE_LEECHSEED,
+			MOVE_POISONJAB,
+			MOVE_BULLDOZE, 
+			MOVE_RECOVER,
 			MOVE_TOXIC, 
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
@@ -2479,23 +2479,23 @@ static const struct BattleTowerSpread sExpertBossBattle_Cerulean_Rocket[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_OCTILLERY,
-		.nature = NATURE_RASH,
-		.level = ONE_BELOW_PLAYER_MAX_LEVEL,
+		.species = SPECIES_VELUZA,
+		.nature = NATURE_JOLLY,
+		.level = THREE_BELOW_PLAYER_MAX_LEVEL,
 		.hpIv = 31,
 		.atkIv = 31,
 		.defIv = 31,
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Skill Link
+		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Sharpness
 		.item = ITEM_EXPERT_BELT, 
 		.moves =
 		{
-			MOVE_BULLETSEED,
-			MOVE_ROCKBLAST, 
-			MOVE_WATERPULSE,
-			MOVE_ICYWIND, 
+			MOVE_AQUACUTTER,
+			MOVE_PSYCHOCUT, 
+			MOVE_AQUAJET,
+			MOVE_CRUNCH, 
 		},
 		.ball = BALL_TYPE_ULTRA_BALL,
 		.forSingles = TRUE,
@@ -2767,7 +2767,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Ssanne_Sailor1[] =
 	{
 		.species = SPECIES_CRADILY,
 		.nature = NATURE_MODEST,
-		.level = PLAYER_MAX_LEVEL,
+		.level = TWO_BELOW_PLAYER_MAX_LEVEL,
 		.hpIv = 31,
 		.atkIv = 30,
 		.defIv = 31,
@@ -2813,23 +2813,23 @@ static const struct BattleTowerSpread sExpertBossBattle_Ssanne_Sailor1[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_GASTRODON,
-		.nature = NATURE_MODEST,
-		.level = PLAYER_MAX_LEVEL,
+		.species = SPECIES_TATSUGIRI,
+		.nature = NATURE_CALM,
+		.level = ONE_BELOW_PLAYER_MAX_LEVEL,
 		.hpIv = 31,
-		.atkIv = 31,
+		.atkIv = 30,
 		.defIv = 31,
-		.spAtkIv = 31,
+		.spAtkIv = 30,
 		.spDefIv = 31,
 		.spdIv = 31,
 		.ability = FRONTIER_ABILITY_2, // Storm Drain
-		.item = ITEM_RINDO_BERRY,
+		.item = ITEM_ASSAULT_VEST,
 		.moves =
 		{
-			MOVE_HYDROPUMP,
-			MOVE_EARTHPOWER,
-			MOVE_ICEBEAM, 
-			MOVE_SLUDGEWAVE, 
+			MOVE_SCALD,
+			MOVE_DRAGONPULSE,
+			MOVE_HIDDENPOWER, //grass
+			MOVE_ICYWIND, 
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
 		.forSingles = TRUE,
@@ -3079,7 +3079,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Route11_Whitney[] =
 		.item = ITEM_FOCUS_SASH,
 		.moves =
 		{
-			MOVE_FLAMETHROWER,
+			MOVE_TORCHSONG,
 			MOVE_HYPERVOICE, 
 			MOVE_HIDDENPOWER, //grass
 			MOVE_SLEEPTALK, 
@@ -3090,7 +3090,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Route11_Whitney[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_WYRDEER,
+		.species = SPECIES_FARIGIRAF,
 		.nature = NATURE_TIMID,
 		.level = 30,
 		.hpIv = 31,
@@ -3099,16 +3099,16 @@ static const struct BattleTowerSpread sExpertBossBattle_Route11_Whitney[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Fur Coat
+		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Parental Bond
 		.item = ITEM_NORMAL_GEM,
 		.moves =
 		{
-			MOVE_PSYCHIC,
+			MOVE_CHARGEBEAM,
 			MOVE_HYPERVOICE, 
-			MOVE_MYSTICALFIRE,
-			MOVE_CALMMIND,
+			MOVE_PSYCHIC,
+			MOVE_DAZZLINGGLEAM,
 		},
-		.ball = BALL_TYPE_HISUIAN_BALL,
+		.ball = BALL_TYPE_POKE_BALL,
 		.forSingles = TRUE,
 		.forDoubles = TRUE,
 		.modifyMovesDoubles = FALSE,
@@ -3138,8 +3138,8 @@ static const struct BattleTowerSpread sExpertBossBattle_Route11_Whitney[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_URSARING,
-		.nature = NATURE_ADAMANT,
+		.species = SPECIES_SWELLOW,
+		.nature = NATURE_JOLLY,
 		.level = 30,
 		.hpIv = 31,
 		.atkIv = 31,
@@ -3148,15 +3148,16 @@ static const struct BattleTowerSpread sExpertBossBattle_Route11_Whitney[] =
 		.spDefIv = 31,
 		.spdIv = 31,
 		.ability = FRONTIER_ABILITY_1, //ABILITY Guts
-		.item = ITEM_EVIOLITE, 
+		.item = ITEM_NORMAL_GEM, 
+		.statusCondition = STATUS_BURN, 
 		.moves =
 		{
-			MOVE_BODYSLAM,
-			MOVE_EARTHQUAKE, 
-			MOVE_SLACKOFF,
-			MOVE_SUCKERPUNCH, 
+			MOVE_BRAVEBIRD,
+			MOVE_FACADE, 
+			MOVE_UTURN,
+			MOVE_QUICKATTACK, 
 		},
-		.ball = BALL_TYPE_GREAT_BALL,
+		.ball = BALL_TYPE_LOVE_BALL,
 		.forSingles = TRUE,
 		.forDoubles = TRUE,
 		.modifyMovesDoubles = FALSE,
@@ -3633,7 +3634,7 @@ static const struct BattleTowerSpread sExpertBossBattle_PkmnTower_AceT1[] =
 		.forDoubles = TRUE,
 		.modifyMovesDoubles = FALSE,
 	},
-		{
+	{
 		.species = SPECIES_KELDEO, 
 		.nature = NATURE_TIMID,
 		.level = PLAYER_MAX_LEVEL,
@@ -3643,7 +3644,7 @@ static const struct BattleTowerSpread sExpertBossBattle_PkmnTower_AceT1[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Blademaster
+		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Sharpness
 		.item = ITEM_WATER_GEM,
 		.moves =
 		{
@@ -3917,7 +3918,7 @@ static const struct BattleTowerSpread sExpertBossBattle_PkmnTower_AceT3[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Blademaster
+		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Sharpness
 		.item = ITEM_WHITE_HERB,
 		.moves =
 		{
@@ -4141,7 +4142,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Vermilion_LtSurgeGymTrai
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Blademaster
+		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Sharpness
 		.item = ITEM_LEEK,
 		.moves =
 		{
@@ -4236,8 +4237,8 @@ static const struct BattleTowerSpread sExpertBossBattle_Vermilion_LtSurge[] =
 		.nature = NATURE_TIMID,
 		.level = 35,
 		.hpIv = 31,
-		.atkIv = 30,
-		.defIv = 30,
+		.atkIv = 0,
+		.defIv = 31,
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
@@ -4328,7 +4329,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Vermilion_LtSurge[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_ELECTIVIRE,
+		.species = SPECIES_PAWMOT,
 		.nature = NATURE_JOLLY,
 		.level = 36,
 		.hpIv = 31,
@@ -4338,7 +4339,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Vermilion_LtSurge[] =
 		.spDefIv = 31,
 		.spdIv = 31,
 		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Iron Fist
-		.item = ITEM_BLACK_BELT, 
+		.item = ITEM_PUNCHING_GLOVE, 
 		.moves =
 		{
 			MOVE_PLASMAFISTS,
@@ -4365,7 +4366,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Vermilion_LtSurge[] =
 		.item = ITEM_AMPHAROSITE, 
 		.moves =
 		{
-			MOVE_RISINGVOLTAGE,
+			MOVE_VOLTSWITCH,
 			MOVE_DRAGONPULSE, 
 			MOVE_FOCUSBLAST,
 			MOVE_HIDDENPOWER, //grass
@@ -4808,8 +4809,8 @@ static const struct BattleTowerSpread sExpertBossBattle_Route8_Pokenerd[] =
 //Doubles
 {
 	{
-		.species = SPECIES_LUCARIO,
-		.nature = NATURE_JOLLY,
+		.species = SPECIES_ARMAROUGE,
+		.nature = NATURE_MODEST,
 		.level = ONE_BELOW_PLAYER_MAX_LEVEL,
 		.hpIv = 31,
 		.atkIv = 31,
@@ -4817,14 +4818,14 @@ static const struct BattleTowerSpread sExpertBossBattle_Route8_Pokenerd[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Justified
-		.item = ITEM_CHOPLE_BERRY, 
+		.ability = FRONTIER_ABILITY_2, //ABILITY Weak Armor
+		.item = ITEM_WEAKNESS_POLICY, 
 		.moves =
 		{
-			MOVE_CLOSECOMBAT,
-			MOVE_METEORMASH, 
-			MOVE_EXTREMESPEED,
-			MOVE_ICEPUNCH, 
+			MOVE_FLAMETHROWER,
+			MOVE_STOREDPOWER, 
+			MOVE_SHADOWBALL,
+			MOVE_AURASPHERE, 
 		},
 		.ball = BALL_TYPE_POKE_BALL,
 		.forSingles = TRUE,
@@ -5192,7 +5193,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Lavender_Morty[] =
 		.spDefIv = 31,
 		.spdIv = 31,
 		.ability = FRONTIER_ABILITY_1, //ABILITY Intimidate
-		.item = ITEM_FOCUS_SASH, 
+		.item = ITEM_CHOPLE_BERRY, 
 		.moves =
 		{
 			MOVE_STEALTHROCK,
@@ -5254,8 +5255,8 @@ static const struct BattleTowerSpread sExpertBossBattle_Lavender_Morty[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_DELPHOX,
-		.nature = NATURE_MODEST,
+		.species = SPECIES_CERULEDGE,
+		.nature = NATURE_JOLLY,
 		.level = 44,
 		.hpIv = 31,
 		.atkIv = 31,
@@ -5263,14 +5264,14 @@ static const struct BattleTowerSpread sExpertBossBattle_Lavender_Morty[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Magic Guard
-		.item = ITEM_CHOICE_SCARF, 
+		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Weak Armor
+		.item = ITEM_FOCUS_SASH, 
 		.moves =
 		{
-			MOVE_MINDBLOWN,
-			MOVE_PSYCHIC, 
-			MOVE_GRASSKNOT,
-			MOVE_DAZZLINGGLEAM, 
+			MOVE_SWORDSDANCE,
+			MOVE_SHADOWSNEAK, 
+			MOVE_BITTERBLADE,
+			MOVE_CLOSECOMBAT, 
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
 		.forSingles = TRUE,
@@ -5330,7 +5331,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Lavender_Morty[] =
 static const struct BattleTowerSpread sExpertBossBattle_GameCorner_Rocket1[] =
 {
 	{
-		.species = SPECIES_CRUSTLE,
+		.species = SPECIES_SAMUROTT_H,
 		.nature = NATURE_JOLLY,
 		.level = ONE_BELOW_PLAYER_MAX_LEVEL,
 		.hpIv = 31,
@@ -5339,14 +5340,14 @@ static const struct BattleTowerSpread sExpertBossBattle_GameCorner_Rocket1[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY sturdy
-		.item = ITEM_WHITE_HERB, 
+		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Sharpness
+		.item = ITEM_SITRUS_BERRY, 
 		.moves =
 		{
-			MOVE_SHELLSMASH,
-			MOVE_ROCKBLAST, 
-			MOVE_XSCISSOR,
-			MOVE_EARTHQUAKE,
+			MOVE_CEASELESSEDGE,
+			MOVE_AQUACUTTER, 
+			MOVE_AQUAJET,
+			MOVE_TAUNT,
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
 		.forSingles = TRUE,
@@ -5603,7 +5604,7 @@ static const struct BattleTowerSpread sExpertBossBattle_RocketHideout_GruntMini2
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_KLINKLANG,
+		.species = SPECIES_REVAVROOM,
 		.nature = NATURE_ADAMANT,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
@@ -5612,14 +5613,14 @@ static const struct BattleTowerSpread sExpertBossBattle_RocketHideout_GruntMini2
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Steelworker
-		.item = ITEM_OCCA_BERRY, 
+		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Filter
+		.item = ITEM_AIR_BALLOON, 
 		.moves =
 		{
 			MOVE_SHIFTGEAR,
-			MOVE_GEARGRIND, 
-			MOVE_VOLTTACKLE,
-			MOVE_SUPERPOWER, 
+			MOVE_IRONHEAD, 
+			MOVE_GUNKSHOT,
+			MOVE_HIGHHORSEPOWER, 
 		},
 		.ball = BALL_TYPE_ULTRA_BALL,
 		.forSingles = TRUE,
@@ -5703,8 +5704,8 @@ static const struct BattleTowerSpread sExpertBossBattle_RocketHideout_Giovanni1[
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_SILVALLY_GHOST,
-		.nature = NATURE_JOLLY,
+		.species = SPECIES_ORTHWORM,
+		.nature = NATURE_IMPISH,
 		.level = 47,
 		.hpIv = 31,
 		.atkIv = 31,
@@ -5712,14 +5713,14 @@ static const struct BattleTowerSpread sExpertBossBattle_RocketHideout_Giovanni1[
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Battle Armor
-		.item = ITEM_GHOST_GEM, 
+		.ability = FRONTIER_ABILITY_1, //ABILITY Earth Eater
+		.item = ITEM_SITRUS_BERRY, 
 		.moves =
 		{
-			MOVE_MULTIATTACK,
-			MOVE_PARTINGSHOT, 
-			MOVE_THUNDERWAVE,
-			MOVE_EXPLOSION, 
+			MOVE_HEAVYSLAM,
+			MOVE_BODYPRESS, 
+			MOVE_SHEDTAIL,
+			MOVE_EARTHQUAKE, 
 		},
 		.ball = BALL_TYPE_ULTRA_BALL,
 		.forSingles = TRUE,
@@ -6428,6 +6429,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Route16_Biker2[] =
 };
 
 static const struct BattleTowerSpread sExpertBossBattle_Route16_Biker3[] =
+//Sandstorm
 {
 	{
 		.species = SPECIES_KINGLER,
@@ -6516,7 +6518,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Route16_Biker4[] =
 		.spDefIv = 31,
 		.spdIv = 31,
 		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Sand Rush
-		.item = ITEM_WATER_GEM,
+		.item = ITEM_MYSTIC_WATER,
 		.moves =
 		{
 			MOVE_FISHIOUSREND,
@@ -6912,7 +6914,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Route18_Biker1[] =
 		.spDefIv = 31,
 		.spdIv = 31,
 		.ability = FRONTIER_ABILITY_1, //ABILITY Defiant
-		.item = ITEM_FOCUS_SASH, 
+		.item = ITEM_EVIOLITE, 
 		.moves =
 		{
 			MOVE_SWORDSDANCE,
@@ -6940,7 +6942,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Route18_Biker1[] =
 		.moves =
 		{
 			MOVE_DRAGONDANCE,
-			MOVE_WATERFALL, 
+			MOVE_WAVECRASH, 
 			MOVE_EARTHQUAKE,
 			MOVE_BOUNCE,
 		},
@@ -6964,8 +6966,8 @@ static const struct BattleTowerSpread sExpertBossBattle_Route18_Biker1[] =
 		.moves =
 		{
 			MOVE_HURRICANE,
-			MOVE_DRAGONPULSE, 
-			MOVE_HYDROPUMP,
+			MOVE_HYDROPUMP, 
+			MOVE_IRONHEAD,
 			MOVE_EARTHQUAKE,
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
@@ -7348,25 +7350,25 @@ static const struct BattleTowerSpread sExpertBossBattle_Route18_Trainer3[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_RAIKOU,
+		.species = SPECIES_KILOWATTREL,
 		.nature = NATURE_TIMID,
 		.level = TWO_BELOW_PLAYER_MAX_LEVEL,
 		.hpIv = 31,
-		.atkIv = 30,
-		.defIv = 30,
+		.atkIv = 31,
+		.defIv = 31,
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Inner Focus
-		.item = ITEM_AIR_BALLOON, 
+		.ability = FRONTIER_ABILITY_2, //ABILITY Volt Absorb
+		.item = ITEM_FLYING_GEM, 
 		.moves =
 		{
 			MOVE_THUNDER,
 			MOVE_WEATHERBALL, 
-			MOVE_HIDDENPOWER, //ice
-			MOVE_CALMMIND,
+			MOVE_HURRICANE, 
+			MOVE_VOLTSWITCH,
 		},
-		.ball = BALL_TYPE_ULTRA_BALL,
+		.ball = BALL_TYPE_POKE_BALL,
 		.forSingles = TRUE,
 		.forDoubles = TRUE,
 		.modifyMovesDoubles = FALSE,
@@ -8456,7 +8458,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Route12_Cooltrainer[] =
 		.modifyMovesDoubles = FALSE,
 	},
 {
-		.species = SPECIES_SANDSLASH_A,
+		.species = SPECIES_CETITAN,
 		.nature = NATURE_JOLLY,
 		.level = TWO_BELOW_PLAYER_MAX_LEVEL,
 		.hpIv = 31,
@@ -8465,14 +8467,14 @@ static const struct BattleTowerSpread sExpertBossBattle_Route12_Cooltrainer[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Slush Rush
-		.item = ITEM_FOCUS_SASH,
+		.ability = FRONTIER_ABILITY_2, //ABILITY Slush Rush
+		.item = ITEM_SITRUS_BERRY,
 		.moves =
 		{
-			MOVE_SWORDSDANCE,
-			MOVE_EARTHQUAKE, 
-			MOVE_IRONHEAD,
-			MOVE_ICICLECRASH,
+			MOVE_BELLYDRUM,
+			MOVE_ICICLECRASH, 
+			MOVE_EARTHQUAKE,
+			MOVE_PLAYROUGH,
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
 		.forSingles = TRUE,
@@ -8582,8 +8584,8 @@ static const struct BattleTowerSpread sExpertBossBattle_Route12_Fisherman[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_ARCTOZOLT,
-		.nature = NATURE_NAIVE,
+		.species = SPECIES_BAXCALIBUR,
+		.nature = NATURE_JOLLY,
 		.level = TWO_BELOW_PLAYER_MAX_LEVEL,
 		.hpIv = 31,
 		.atkIv = 31,
@@ -8591,14 +8593,14 @@ static const struct BattleTowerSpread sExpertBossBattle_Route12_Fisherman[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Slush Rush
-		.item = ITEM_ICIUM_Z,
+		.ability = FRONTIER_ABILITY_1, //ABILITY Thermal Exchange
+		.item = ITEM_DRAGONIUM_Z,
 		.moves =
 		{
-			MOVE_BOLTBEAK,
-			MOVE_BLIZZARD, 
-			MOVE_LOWKICK, 
-			MOVE_STONEEDGE, 
+			MOVE_DRAGONDANCE,
+			MOVE_ICICLECRASH, 
+			MOVE_GLAIVERUSH, 
+			MOVE_EARTHQUAKE, 
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
 		.forSingles = TRUE,
@@ -9153,8 +9155,8 @@ static const struct BattleTowerSpread sExpertBossBattle_SilphCo_Archer[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_AEGISLASH,
-		.nature = NATURE_QUIET,
+		.species = SPECIES_GHOLDENGO,
+		.nature = NATURE_TIMID,
 		.level = 55,
 		.hpIv = 31,
 		.atkIv = 31,
@@ -9167,9 +9169,9 @@ static const struct BattleTowerSpread sExpertBossBattle_SilphCo_Archer[] =
 		.moves =
 		{
 			MOVE_SHADOWBALL,
-			MOVE_FLASHCANNON, 
-			MOVE_SHADOWSNEAK,
-			MOVE_KINGSSHIELD,
+			MOVE_MAKEITRAIN, 
+			MOVE_FOCUSBLAST,
+			MOVE_RECOVER,
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
 		.forSingles = TRUE,
@@ -9277,7 +9279,7 @@ static const struct BattleTowerSpread sExpertBossBattle_SilphCo_Giovanni[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_REGIROCK,
+		.species = SPECIES_GARGANACL,
 		.nature = NATURE_CAREFUL,
 		.level = 57,
 		.hpIv = 31,
@@ -9286,14 +9288,14 @@ static const struct BattleTowerSpread sExpertBossBattle_SilphCo_Giovanni[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Solid Rock
+		.ability = FRONTIER_ABILITY_2, //ABILITY Purifying Salt
 		.item = ITEM_LEFTOVERS, 
 		.moves =
 		{
-			MOVE_CURSE,
-			MOVE_DRAINPUNCH, 
-			MOVE_ROCKSLIDE,
-			MOVE_EARTHQUAKE, 
+			MOVE_IRONDEFENSE,
+			MOVE_BODYPRESS, 
+			MOVE_SALTCURE,
+			MOVE_RECOVER, 
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
 		.forSingles = TRUE,
@@ -9388,7 +9390,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Saffron_Chuck[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Poison Touch
+		.ability = FRONTIER_ABILITY_2, //ABILITY Unburden
 		.item = ITEM_LIECHI_BERRY,
 		.moves =
 		{
@@ -9427,7 +9429,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Saffron_Chuck[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_BLAZIKEN,
+		.species = SPECIES_ANNIHILAPE,
 		.nature = NATURE_JOLLY,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
@@ -9436,14 +9438,14 @@ static const struct BattleTowerSpread sExpertBossBattle_Saffron_Chuck[] =
 		.spAtkIv = 0,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Speed BOost
-		.item = ITEM_LIECHI_BERRY, 
+		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Defiant
+		.item = ITEM_SALAC_BERRY, 
 		.moves =
 		{
-			MOVE_BLAZEKICK,
-			MOVE_KNOCKOFF, 
-			MOVE_THUNDERPUNCH,
-			MOVE_CLOSECOMBAT, 
+			MOVE_BULKUP,
+			MOVE_DRAINPUNCH, 
+			MOVE_RAGEFIST,
+			MOVE_ICEPUNCH,
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
 		.forSingles = TRUE,
@@ -9604,8 +9606,8 @@ static const struct BattleTowerSpread sExpertBossBattle_Saffron_Sabrina[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_MELMETAL,
-		.nature = NATURE_SASSY,
+		.species = SPECIES_IRONHANDS,
+		.nature = NATURE_BRAVE,
 		.level = 59,
 		.hpIv = 31,
 		.atkIv = 31,
@@ -9613,14 +9615,14 @@ static const struct BattleTowerSpread sExpertBossBattle_Saffron_Sabrina[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 0,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Iron Fist
-		.item = ITEM_ASSAULT_VEST, 
+		.ability = FRONTIER_ABILITY_1, //ABILITY Quark Drive
+		.item = ITEM_BOOSTER_ENERGY, 
 		.moves =
 		{
-			MOVE_DOUBLEIRONBASH,
-			MOVE_HIGHHORSEPOWER, 
-			MOVE_THUNDERPUNCH,
-			MOVE_BRICKBREAK, 
+			MOVE_DRAINPUNCH,
+			MOVE_PLASMAFISTS, 
+			MOVE_KNOCKOFF,
+			MOVE_ICEPUNCH, 
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
 		.shiny = TRUE,
@@ -9639,7 +9641,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Saffron_Sabrina[] =
 		.spDefIv = 31,
 		.spdIv = 0,
 		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Water bubble
-		.item = ITEM_WATER_GEM, 
+		.item = ITEM_MYSTIC_WATER, 
 		.moves =
 		{
 			MOVE_WATERSPOUT,
@@ -9881,7 +9883,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Pewter_BrockRematch[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_SANDSLASH,
+		.species = SPECIES_IRONTREADS,
 		.nature = NATURE_JOLLY,
 		.level = 68,
 		.hpIv = 31,
@@ -9890,14 +9892,14 @@ static const struct BattleTowerSpread sExpertBossBattle_Pewter_BrockRematch[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Sand Rush
-		.item = ITEM_GROUNDIUM_Z, 
+		.ability = FRONTIER_ABILITY_1, //ABILITY Quark Drive
+		.item = ITEM_BOOSTER_ENERGY, 
 		.moves =
 		{
-			MOVE_SWORDSDANCE,
+			MOVE_KNOCKOFF,
 			MOVE_EARTHQUAKE, 
-			MOVE_STONEEDGE,
-			MOVE_KNOCKOFF, 
+			MOVE_IRONHEAD,
+			MOVE_ICESPINNER, 
 		},
 		.ball = BALL_TYPE_ULTRA_BALL,
 		.forSingles = TRUE,
@@ -9958,8 +9960,8 @@ static const struct BattleTowerSpread sExpertBossBattle_Cerulean_MistyRematch[] 
 //perma rain
 {
 	{
-		.species = SPECIES_GRENINJA,
-		.nature = NATURE_NAIVE,
+		.species = SPECIES_IRONBUNDLE,
+		.nature = NATURE_TIMID,
 		.level = 68,
 		.hpIv = 31,
 		.atkIv = 31,
@@ -9967,16 +9969,40 @@ static const struct BattleTowerSpread sExpertBossBattle_Cerulean_MistyRematch[] 
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Protean
-		.item = ITEM_FOCUS_SASH, 
+		.ability = FRONTIER_ABILITY_1, //ABILITY Quark Drive
+		.item = ITEM_FOCUS_SASH,
 		.moves =
 		{
-			MOVE_UTURN,
-			MOVE_SURF, 
+			MOVE_HYDROPUMP,
+			MOVE_FREEZEDRY, 
+			MOVE_FLIPTURN,
 			MOVE_ICEBEAM,
-			MOVE_DARKPULSE,
 		},
-		.ball = BALL_TYPE_CHERISH_BALL,
+		.ball = BALL_TYPE_ULTRA_BALL,
+		.forSingles = TRUE,
+		.forDoubles = TRUE,
+		.modifyMovesDoubles = FALSE,
+	},
+	{
+		.species = SPECIES_PALAFIN_HERO, //pretransformed
+		.nature = NATURE_JOLLY,
+		.level = 68,
+		.hpIv = 31,
+		.atkIv = 31,
+		.defIv = 31,
+		.spAtkIv = 31,
+		.spDefIv = 31,
+		.spdIv = 31,
+		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Mold Breaker KEKW
+		.item = ITEM_MYSTIC_WATER,
+		.moves =
+		{
+			MOVE_JETPUNCH,
+			MOVE_WATERFALL, 
+			MOVE_DRAINPUNCH,
+			MOVE_BULKUP,
+		},
+		.ball = BALL_TYPE_ULTRA_BALL,
 		.forSingles = TRUE,
 		.forDoubles = TRUE,
 		.modifyMovesDoubles = FALSE,
@@ -10006,47 +10032,23 @@ static const struct BattleTowerSpread sExpertBossBattle_Cerulean_MistyRematch[] 
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_SEISMITOAD,
-		.nature = NATURE_MODEST,
-		.level = 68,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 31,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Swift Swim
-		.item = ITEM_LIFE_ORB,
-		.moves =
-		{
-			MOVE_WEATHERBALL,
-			MOVE_EARTHPOWER, 
-			MOVE_FOCUSBLAST,
-			MOVE_POWERWHIP,
-		},
-		.ball = BALL_TYPE_GREAT_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_JIRACHI,
+		.species = SPECIES_IRONJUGULIS,
 		.nature = NATURE_TIMID,
 		.level = 68,
 		.hpIv = 31,
 		.atkIv = 31,
 		.defIv = 31,
-		.spAtkIv = 31,
+		.spAtkIv = 31, 
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Serene Grace
-		.item = ITEM_LEFTOVERS, 
+		.ability = FRONTIER_ABILITY_1, //ABILITY Quark Drive
+		.item = ITEM_BOOSTER_ENERGY, 
 		.moves =
 		{
-			MOVE_CALMMIND,
-			MOVE_THUNDER, 
-			MOVE_PSYSHOCK,
-			MOVE_WATERPULSE, 
+			MOVE_DARKPULSE,
+			MOVE_HURRICANE, 
+			MOVE_HYDROPUMP,
+			MOVE_EARTHPOWER, 
 		},
 		.ball = BALL_TYPE_ULTRA_BALL,
 		.forSingles = TRUE,
@@ -10107,7 +10109,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Vermilion_LtSurgeRematch
 //perma electric terrain, perma magnet rise
 {
 	{
-		.species = SPECIES_ELECTIVIRE,
+		.species = SPECIES_PAWMOT,
 		.nature = NATURE_JOLLY,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
@@ -10120,7 +10122,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Vermilion_LtSurgeRematch
 		.item = ITEM_FOCUS_SASH, 
 		.moves =
 		{
-			MOVE_PLASMAFISTS,
+			MOVE_THUNDERPUNCH,
 			MOVE_CLOSECOMBAT, 
 			MOVE_MACHPUNCH,
 			MOVE_ICEPUNCH,
@@ -10131,55 +10133,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Vermilion_LtSurgeRematch
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_RAICHU_A,
-		.nature = NATURE_MODEST,
-		.level = PLAYER_MAX_LEVEL,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 31,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Surge Surfer
-		.item = ITEM_COLBUR_BERRY,
-		.moves =
-		{
-			MOVE_RISINGVOLTAGE,
-			MOVE_SURF, 
-			MOVE_PSYSHOCK, 
-			MOVE_FOCUSBLAST, 
-		},
-		.ball = BALL_TYPE_GREAT_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_MAGNEZONE,
-		.nature = NATURE_MODEST,
-		.level = PLAYER_MAX_LEVEL,
-		.hpIv = 31,
-		.atkIv = 30,
-		.defIv = 31,
-		.spAtkIv = 30,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_2, //ABILITY Sturdy
-		.item = ITEM_ASSAULT_VEST,
-		.moves =
-		{
-			MOVE_RISINGVOLTAGE,
-			MOVE_FLASHCANNON, 
-			MOVE_HIDDENPOWER, //grass
-			MOVE_BODYPRESS,
-		},
-		.ball = BALL_TYPE_GREAT_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_ZEKROM,
+		.species = SPECIES_IRONTHORNS,
 		.nature = NATURE_JOLLY,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
@@ -10188,44 +10142,92 @@ static const struct BattleTowerSpread sExpertBossBattle_Vermilion_LtSurgeRematch
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Teravolt
-		.item = ITEM_LUM_BERRY, 
+		.ability = FRONTIER_ABILITY_1, //ABILITY Quark Drive
+		.item = ITEM_LUM_BERRY,
 		.moves =
 		{
-			MOVE_HONECLAWS,
-			MOVE_BOLTSTRIKE, 
-			MOVE_DRAGONRUSH, 
-			MOVE_ROOST, 
+			MOVE_DRAGONDANCE,
+			MOVE_FUSIONBOLT, 
+			MOVE_STONEEDGE, 
+			MOVE_ICEPUNCH, 
+		},
+		.ball = BALL_TYPE_ULTRA_BALL,
+		.forSingles = TRUE,
+		.forDoubles = TRUE,
+		.modifyMovesDoubles = FALSE,
+	},
+	{
+		.species = SPECIES_IRONMOTH,
+		.nature = NATURE_TIMID,
+		.level = PLAYER_MAX_LEVEL,
+		.hpIv = 31,
+		.atkIv = 31,
+		.defIv = 31,
+		.spAtkIv = 31,
+		.spDefIv = 31,
+		.spdIv = 31,
+		.ability = FRONTIER_ABILITY_1, //ABILITY Quark Drive
+		.item = ITEM_FIRE_GEM,
+		.moves =
+		{
+			MOVE_FIERYDANCE,
+			MOVE_SLUDGEWAVE, 
+			MOVE_ENERGYBALL, 
+			MOVE_DAZZLINGGLEAM, 
+		},
+		.ball = BALL_TYPE_ULTRA_BALL,
+		.forSingles = TRUE,
+		.forDoubles = TRUE,
+		.modifyMovesDoubles = FALSE,
+	},
+	{
+		.species = SPECIES_IRONHANDS,
+		.nature = NATURE_CAREFUL,
+		.level = PLAYER_MAX_LEVEL,
+		.hpIv = 31,
+		.atkIv = 31,
+		.defIv = 31,
+		.spAtkIv = 31,
+		.spDefIv = 31,
+		.spdIv = 31,
+		.ability = FRONTIER_ABILITY_1, //ABILITY Quark Drive
+		.item = ITEM_ASSAULT_VEST,
+		.moves =
+		{
+			MOVE_PLASMAFISTS,
+			MOVE_DRAINPUNCH, 
+			MOVE_ICEPUNCH, 
+			MOVE_FAKEOUT,
+		},
+		.ball = BALL_TYPE_ULTRA_BALL,
+		.forSingles = TRUE,
+		.forDoubles = TRUE,
+		.modifyMovesDoubles = FALSE,
+	},
+	{
+		.species = SPECIES_MIRAIDON,
+		.nature = NATURE_TIMID,
+		.level = PLAYER_MAX_LEVEL,
+		.hpIv = 31,
+		.atkIv = 31,
+		.defIv = 31,
+		.spAtkIv = 31,
+		.spDefIv = 31,
+		.spdIv = 31,
+		.ability = FRONTIER_ABILITY_1, //ABILITY Hadron Engine
+		.item = ITEM_LEFTOVERS, 
+		.moves =
+		{
+			MOVE_CALMMIND,
+			MOVE_PARABOLICCHARGE, 
+			MOVE_DRAGONPULSE, 
+			MOVE_DAZZLINGGLEAM, 
 		},
 		.ball = BALL_TYPE_MASTER_BALL,
 		.forSingles = TRUE,
 		.forDoubles = TRUE,
 		.modifyMovesDoubles = FALSE,
 		.shiny = TRUE,
-	},
-	{
-		.species = SPECIES_RAIKOU,
-		.nature = NATURE_TIMID,
-		.level = PLAYER_MAX_LEVEL,
-		.hpIv = 31,
-		.atkIv = 30,
-		.defIv = 30,
-		.spAtkIv = 31,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY inner Focus
-		.item = ITEM_FIGHTINIUM_Z, 
-		.moves =
-		{
-			MOVE_CALMMIND,
-			MOVE_RISINGVOLTAGE, 
-			MOVE_AURASPHERE,
-			MOVE_HIDDENPOWER, //ice
-		},
-		.ball = BALL_TYPE_GREAT_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
 	},
 	{
 		.species = SPECIES_MANECTRIC,
@@ -11122,23 +11124,23 @@ static const struct BattleTowerSpread sExpertBossBattle_Fuschia_Koga[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_KYUREM_WHITE,
+		.species = SPECIES_CHI_YU,
 		.nature = NATURE_MODEST,
 		.level = 68,
 		.hpIv = 31,
-		.atkIv = 31,
+		.atkIv = 30,
 		.defIv = 31,
-		.spAtkIv = 31,
+		.spAtkIv = 30,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Turbo Blaze
-		.item = ITEM_DRAGON_FANG, 
+		.ability = FRONTIER_ABILITY_1, //ABILITY Beads of Ruin
+		.item = ITEM_FOCUS_SASH, 
 		.moves =
 		{
-			MOVE_FREEZEDRY,
-			MOVE_FUSIONFLARE, 
-			MOVE_EARTHPOWER,
-			MOVE_DYNAMAXCANNON, 
+			MOVE_DARKPULSE,
+			MOVE_FLAMETHROWER, 
+			MOVE_PSYCHIC,
+			MOVE_HIDDENPOWER, //grass
 		},
 		.ball = BALL_TYPE_MASTER_BALL,
 		.forSingles = TRUE,
@@ -11199,31 +11201,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Seafoam_Pryce1[] =
 //perma hail 
 {
 	{
-		.species = SPECIES_CLOYSTER,
-		.nature = NATURE_NAIVE,
-		.level = PLAYER_MAX_LEVEL,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 31,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_2, //ABILITY Skill Link
-		.item = ITEM_FOCUS_SASH, 
-		.moves =
-		{
-			MOVE_SHELLSMASH,
-			MOVE_ICICLESPEAR, 
-			MOVE_HYDROPUMP,
-			MOVE_ROCKBLAST,
-		},
-		.ball = BALL_TYPE_GREAT_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_SUICUNE,
+		.species = SPECIES_JYNX,
 		.nature = NATURE_TIMID,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
@@ -11232,14 +11210,38 @@ static const struct BattleTowerSpread sExpertBossBattle_Seafoam_Pryce1[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Pressure
-		.item = ITEM_LEFTOVERS,
+		.ability = FRONTIER_ABILITY_1, //ABILITY Dry Skin
+		.item = ITEM_FOCUS_SASH, 
 		.moves =
 		{
-			MOVE_SCALD,
-			MOVE_CALMMIND, 
-			MOVE_REST, 
-			MOVE_SLEEPTALK, 
+			MOVE_LOVELYKISS,
+			MOVE_PSYSTRIKE, 
+			MOVE_BLIZZARD,
+			MOVE_FOCUSBLAST,
+		},
+		.ball = BALL_TYPE_GREAT_BALL,
+		.forSingles = TRUE,
+		.forDoubles = TRUE,
+		.modifyMovesDoubles = FALSE,
+	},
+	{
+		.species = SPECIES_CLOYSTER,
+		.nature = NATURE_JOLLY,
+		.level = PLAYER_MAX_LEVEL,
+		.hpIv = 31,
+		.atkIv = 31,
+		.defIv = 31,
+		.spAtkIv = 31,
+		.spDefIv = 31,
+		.spdIv = 31,
+		.ability = FRONTIER_ABILITY_2, //ABILITY Skill Link
+		.item = ITEM_WHITE_HERB,
+		.moves =
+		{
+			MOVE_SHELLSMASH,
+			MOVE_ICICLESPEAR, 
+			MOVE_WATERFALL, 
+			MOVE_ROCKBLAST, 
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
 		.forSingles = TRUE,
@@ -11497,31 +11499,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Seafoam_Pryce3[] =
 //perma hail
 {
 	{
-		.species = SPECIES_CLOYSTER,
-		.nature = NATURE_NAIVE,
-		.level = PLAYER_MAX_LEVEL,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 31,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_2, //ABILITY Skill Link
-		.item = ITEM_FOCUS_SASH, 
-		.moves =
-		{
-			MOVE_SHELLSMASH,
-			MOVE_ICICLESPEAR, 
-			MOVE_HYDROPUMP,
-			MOVE_ROCKBLAST,
-		},
-		.ball = BALL_TYPE_GREAT_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_SUICUNE,
+		.species = SPECIES_JYNX,
 		.nature = NATURE_TIMID,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
@@ -11530,14 +11508,38 @@ static const struct BattleTowerSpread sExpertBossBattle_Seafoam_Pryce3[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Pressure
-		.item = ITEM_LEFTOVERS,
+		.ability = FRONTIER_ABILITY_1, //ABILITY Dry Skin
+		.item = ITEM_FOCUS_SASH, 
 		.moves =
 		{
-			MOVE_SCALD,
-			MOVE_CALMMIND, 
-			MOVE_REST, 
-			MOVE_SLEEPTALK, 
+			MOVE_LOVELYKISS,
+			MOVE_PSYSTRIKE, 
+			MOVE_BLIZZARD,
+			MOVE_FOCUSBLAST,
+		},
+		.ball = BALL_TYPE_GREAT_BALL,
+		.forSingles = TRUE,
+		.forDoubles = TRUE,
+		.modifyMovesDoubles = FALSE,
+	},
+	{
+		.species = SPECIES_CLOYSTER,
+		.nature = NATURE_JOLLY,
+		.level = PLAYER_MAX_LEVEL,
+		.hpIv = 31,
+		.atkIv = 31,
+		.defIv = 31,
+		.spAtkIv = 31,
+		.spDefIv = 31,
+		.spdIv = 31,
+		.ability = FRONTIER_ABILITY_2, //ABILITY Skill Link
+		.item = ITEM_WHITE_HERB,
+		.moves =
+		{
+			MOVE_SHELLSMASH,
+			MOVE_ICICLESPEAR, 
+			MOVE_WATERFALL, 
+			MOVE_ROCKBLAST, 
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
 		.forSingles = TRUE,
@@ -11558,7 +11560,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Seafoam_Pryce3[] =
 		.item = ITEM_LIFE_ORB,
 		.moves =
 		{
-			MOVE_SOFTBOILED,
+			MOVE_BLIZZARD,
 			MOVE_TELEPORT, 
 			MOVE_LIGHTOFRUIN, 
 			MOVE_FLAMETHROWER,
@@ -11646,7 +11648,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Celadon_ErikaRe[] =
 //perma grassy terrain, grass moves for erika get 75% boost if not very effective
 {
 	{
-		.species = SPECIES_TSAREENA,
+		.species = SPECIES_MEOWSCARADA,
 		.nature = NATURE_JOLLY,
 		.level = 68,
 		.hpIv = 31,
@@ -11659,9 +11661,9 @@ static const struct BattleTowerSpread sExpertBossBattle_Celadon_ErikaRe[] =
 		.item = ITEM_LIFE_ORB, 
 		.moves =
 		{
-			MOVE_GRASSYGLIDE,
+			MOVE_FLOWERTRICK,
 			MOVE_TRIPLEAXEL, 
-			MOVE_HIGHJUMPKICK,
+			MOVE_KNOCKOFF,
 			MOVE_UTURN,
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
@@ -11968,7 +11970,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Cinnabar_Mansion1[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_SAMUROTT,
+		.species = SPECIES_SAMUROTT_H,
 		.nature = NATURE_JOLLY,
 		.level = ONE_BELOW_PLAYER_MAX_LEVEL,
 		.hpIv = 31,
@@ -11977,11 +11979,11 @@ static const struct BattleTowerSpread sExpertBossBattle_Cinnabar_Mansion1[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Blade master
-		.item = ITEM_SCOPE_LENS, 
+		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Sharpness
+		.item = ITEM_MYSTIC_WATER, 
 		.moves =
 		{
-			MOVE_SWORDSDANCE,
+			MOVE_CEASELESSEDGE,
 			MOVE_RAZORSHELL, 
 			MOVE_AQUAJET,
 			MOVE_SACREDSWORD, 
@@ -12001,7 +12003,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Cinnabar_Mansion1[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_2, //ABILITY Tangled Feet, No Guard
+		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY No Guard
 		.item = ITEM_PIDGEOTITE,
 		.moves =
 		{
@@ -12699,7 +12701,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Cinnabar_AceTrainer3[] =
 	},
 	{
 		.species = SPECIES_BRAVIARY_H,
-		.nature = NATURE_MODEST,
+		.nature = NATURE_TIMID,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
 		.atkIv = 31,
@@ -12707,13 +12709,13 @@ static const struct BattleTowerSpread sExpertBossBattle_Cinnabar_AceTrainer3[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_2, //ABILITY Sheer Force
+		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Tinted Lens
 		.item = ITEM_LIFE_ORB,
 		.moves =
 		{
 			MOVE_AIRSLASH, 
 			MOVE_HEATWAVE, 
-			MOVE_PSYCHIC, 
+			MOVE_ROOST, 
 			MOVE_ESPERWING, 
 		},
 		.ball = BALL_TYPE_HISUIAN_BALL,
@@ -12775,7 +12777,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Cinnabar_Blaine[] =
 //harsh sunlight (water moves do no damage)
 {
 	{
-		.species = SPECIES_HELIOLISK,
+		.species = SPECIES_SANDYSHOCKS,
 		.nature = NATURE_TIMID,
 		.level = 76,
 		.hpIv = 31,
@@ -12784,47 +12786,19 @@ static const struct BattleTowerSpread sExpertBossBattle_Cinnabar_Blaine[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Solar Power
-		.item = ITEM_FOCUS_SASH, 
+		.ability = FRONTIER_ABILITY_1, //ABILITY Protosynthesis
+		.item = ITEM_SHUCA_BERRY, 
 		.moves =
 		{
-			MOVE_BOOMBURST,
-			MOVE_WEATHERBALL, 
+			MOVE_EARTHPOWER,
+			MOVE_VOLTSWITCH, 
 			MOVE_THUNDERBOLT,
-			MOVE_SOLARBEAM, 
+			MOVE_HIDDENPOWER, //grass
 		},
-		.ball = BALL_TYPE_GREAT_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
+		.ball = BALL_TYPE_ULTRA_BALL,
 	},
 	{
-		.species = SPECIES_GROUDON,
-		.nature = NATURE_NAIVE,
-		.level = 76,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 31,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY desolate land, doesnt really matter in this battle
-		.item = ITEM_RED_ORB, 
-		.moves =
-		{
-			MOVE_PRECIPICEBLADES,
-			MOVE_FIREBLAST, 
-			MOVE_STONEEDGE,
-			MOVE_SOLARBEAM, 
-		},
-		.ball = BALL_TYPE_MASTER_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-		.shiny      = TRUE, 
-	},
-	{
-		.species = SPECIES_DARMANITAN_G,
+		.species = SPECIES_GREATTUSK,
 		.nature = NATURE_JOLLY,
 		.level = 76,
 		.hpIv = 31,
@@ -12833,19 +12807,37 @@ static const struct BattleTowerSpread sExpertBossBattle_Cinnabar_Blaine[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Zen Mode
-		.item = ITEM_ICE_GEM,
+		.ability = FRONTIER_ABILITY_1, //ABILITY Protosynthesis
+		.item = ITEM_FIGHTING_GEM, 
 		.moves =
 		{
-			MOVE_MOUNTAINGALE, //illegal
-			MOVE_FLAREBLITZ, 
-			MOVE_UTURN, 
-			MOVE_ROCKSLIDE, 
+			MOVE_ICESPINNER,
+			MOVE_KNOCKOFF, 
+			MOVE_HEADLONGRUSH,
+			MOVE_CLOSECOMBAT, 
 		},
-		.ball = BALL_TYPE_GREAT_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
+		.ball = BALL_TYPE_ULTRA_BALL,
+	},
+	{
+		.species = SPECIES_WALKINGWAKE,
+		.nature = NATURE_TIMID,
+		.level = 76,
+		.hpIv = 31,
+		.atkIv = 31,
+		.defIv = 31,
+		.spAtkIv = 31, 
+		.spDefIv = 31,
+		.spdIv = 31,
+		.ability = FRONTIER_ABILITY_1, //ABILITY Protosynthesis
+		.item = ITEM_WATER_GEM,
+		.moves =
+		{
+			MOVE_DRACOBARRAGE, 
+			MOVE_HYDROSTEAM, 
+			MOVE_FLAMETHROWER, 
+			MOVE_SLEEPTALK, //doesnt really need a 4th slot lol 
+		},
+		.ball = BALL_TYPE_MASTER_BALL,
 	},
 	{
 		.species = SPECIES_VENUSAUR,
@@ -12867,9 +12859,6 @@ static const struct BattleTowerSpread sExpertBossBattle_Cinnabar_Blaine[] =
 			MOVE_WEATHERBALL, 
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
 	},
 	{
 		.species = SPECIES_HO_OH,
@@ -12891,9 +12880,6 @@ static const struct BattleTowerSpread sExpertBossBattle_Cinnabar_Blaine[] =
 			MOVE_SOLARBEAM, 
 		},
 		.ball = BALL_TYPE_MASTER_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
 	},
 	{
 		.species = SPECIES_CHARIZARD,
@@ -12915,9 +12901,6 @@ static const struct BattleTowerSpread sExpertBossBattle_Cinnabar_Blaine[] =
 			MOVE_EARTHQUAKE, 
 		},
 		.ball = BALL_TYPE_ULTRA_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
 	},
 };
 
@@ -12949,7 +12932,7 @@ static const struct BattleTowerSpread sExpertBossBattle_CeruleanCave_Grunt1[] =
 	},
 	{
 		.species = SPECIES_URSARING,
-		.nature = NATURE_JOLLY,
+		.nature = NATURE_ADAMANT,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
 		.atkIv = 31,
@@ -12973,7 +12956,7 @@ static const struct BattleTowerSpread sExpertBossBattle_CeruleanCave_Grunt1[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_BISHARP,
+		.species = SPECIES_KINGAMBIT,
 		.nature = NATURE_JOLLY,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
@@ -12982,7 +12965,7 @@ static const struct BattleTowerSpread sExpertBossBattle_CeruleanCave_Grunt1[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Defiant
+		.ability = FRONTIER_ABILITY_2, //ABILITY Supreme OVerlord
 		.item = ITEM_LIFE_ORB,
 		.moves =
 		{
@@ -12997,8 +12980,8 @@ static const struct BattleTowerSpread sExpertBossBattle_CeruleanCave_Grunt1[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_NINJASK,
-		.nature = NATURE_ADAMANT,
+		.species = SPECIES_ANNIHILAPE,
+		.nature = NATURE_JOLLY,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
 		.atkIv = 31,
@@ -13006,14 +12989,14 @@ static const struct BattleTowerSpread sExpertBossBattle_CeruleanCave_Grunt1[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Speed Boost
-		.item = ITEM_FOCUS_SASH,
+		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Defiant
+		.item = ITEM_LEFTOVERS,
 		.moves =
 		{
-			MOVE_SWORDSDANCE,
-			MOVE_SONICSLASH, 
-			MOVE_XSCISSOR, 
-			MOVE_DRILLRUN, 
+			MOVE_BULKUP,
+			MOVE_DRAINPUNCH, 
+			MOVE_RAGEFIST, 
+			MOVE_ICEPUNCH, 
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
 		.forSingles = TRUE,
@@ -13021,8 +13004,8 @@ static const struct BattleTowerSpread sExpertBossBattle_CeruleanCave_Grunt1[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_REUNICLUS,
-		.nature = NATURE_BOLD,
+		.species = SPECIES_ESPATHRA,
+		.nature = NATURE_MODEST,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
 		.atkIv = 30,
@@ -13030,14 +13013,14 @@ static const struct BattleTowerSpread sExpertBossBattle_CeruleanCave_Grunt1[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Regenerator
-		.item = ITEM_LEFTOVERS, 
+		.ability = FRONTIER_ABILITY_2, //ABILITY Speed Boost
+		.item = ITEM_FOCUS_SASH, 
 		.moves =
 		{
-			MOVE_FUTURESIGHT,
+			MOVE_PROTECT,
 			MOVE_PSYCHIC, 
-			MOVE_FOCUSBLAST,
-			MOVE_TELEPORT, 
+			MOVE_CALMMIND,
+			MOVE_DAZZLINGGLEAM, 
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
 		.forSingles = TRUE,
@@ -13073,8 +13056,8 @@ static const struct BattleTowerSpread sExpertBossBattle_CeruleanCave_Grunt1[] =
 static const struct BattleTowerSpread sExpertBossBattle_CeruleanCave_Grunt2[] =
 {
 	{
-		.species = SPECIES_QWILFISH,
-		.nature = NATURE_IMPISH,
+		.species = SPECIES_GLIMMORA,
+		.nature = NATURE_TIMID,
 		.level = TWO_BELOW_PLAYER_MAX_LEVEL,
 		.hpIv = 31,
 		.atkIv = 31,
@@ -13082,14 +13065,14 @@ static const struct BattleTowerSpread sExpertBossBattle_CeruleanCave_Grunt2[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Prankster
+		.ability = FRONTIER_ABILITY_1, //ABILITY Toxic Debris
 		.item = ITEM_FOCUS_SASH, 
 		.moves =
 		{
-			MOVE_TOXICSPIKES,
-			MOVE_EXPLOSION, 
-			MOVE_WATERFALL,
-			MOVE_DESTINYBOND, 
+			MOVE_STEALTHROCK,
+			MOVE_SPIKES, 
+			MOVE_EARTHPOWER,
+			MOVE_SLUDGEWAVE, 
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
 		.forSingles = TRUE,
@@ -13908,7 +13891,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Viridian_Clair[] =
 		.spDefIv = 31,
 		.spdIv = 31,
 		.ability = FRONTIER_ABILITY_2, //ABILITY Solid Rock
-		.item = ITEM_FOCUS_SASH, 
+		.item = ITEM_SITRUS_BERRY, 
 		.moves =
 		{
 			MOVE_STEALTHROCK,
@@ -13922,8 +13905,8 @@ static const struct BattleTowerSpread sExpertBossBattle_Viridian_Clair[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_GIRATINA,
-		.nature = NATURE_ADAMANT,
+		.species = SPECIES_ROARINGMOON,
+		.nature = NATURE_JOLLY,
 		.level = 81,
 		.hpIv = 31,
 		.atkIv = 31,
@@ -13931,14 +13914,14 @@ static const struct BattleTowerSpread sExpertBossBattle_Viridian_Clair[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Levitate
-		.item = ITEM_GRISEOUS_ORB,
+		.ability = FRONTIER_ABILITY_1, //ABILITY Protosynthesis
+		.item = ITEM_BOOSTER_ENERGY,
 		.moves =
 		{
-			MOVE_DRAGONHAMMER, //illegal
-			MOVE_SPIRITSHACKLE, //illegal
-			MOVE_SHADOWSNEAK, 
-			MOVE_THUNDERWAVE, 
+			MOVE_DRAGONDANCE, 
+			MOVE_CRUNCH, 
+			MOVE_EARTHQUAKE, 
+			MOVE_SCALESHOT, 
 		},
 		.ball = BALL_TYPE_DUSK_BALL,
 		.forSingles = TRUE,
@@ -14198,7 +14181,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Viridian_GaryPreE4Bulbas
 //swamp (pokemon get 1/4 speed)
 {
 	{
-		.species = SPECIES_CONKELDURR,
+		.species = SPECIES_IRONHANDS,
 		.nature = NATURE_JOLLY,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
@@ -14207,14 +14190,14 @@ static const struct BattleTowerSpread sExpertBossBattle_Viridian_GaryPreE4Bulbas
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Iron Fist
+		.ability = FRONTIER_ABILITY_1, //ABILITY Quark Drive
 		.item = ITEM_ASSAULT_VEST, 
 		.moves =
 		{
 			MOVE_DRAINPUNCH,
-			MOVE_MACHPUNCH, 
+			MOVE_PLASMAFISTS, 
 			MOVE_KNOCKOFF,
-			MOVE_POISONJAB, 
+			MOVE_ICEPUNCH, 
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
 		.forSingles = TRUE,
@@ -14222,7 +14205,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Viridian_GaryPreE4Bulbas
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_BISHARP,
+		.species = SPECIES_KINGAMBIT,
 		.nature = NATURE_ADAMANT,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
@@ -14231,8 +14214,8 @@ static const struct BattleTowerSpread sExpertBossBattle_Viridian_GaryPreE4Bulbas
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Defiant
-		.item = ITEM_FOCUS_SASH, 
+		.ability = FRONTIER_ABILITY_2, //ABILITY Supreme Overlord
+		.item = ITEM_CHOPLE_BERRY, 
 		.moves =
 		{
 			MOVE_SWORDSDANCE,
@@ -14405,7 +14388,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Viridian_GaryPreE4Squirt
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Levitate
+		.ability = FRONTIER_ABILITY_1, //ABILITY Beast Boost
 		.item = ITEM_WEAKNESS_POLICY, 
 		.moves =
 		{
@@ -14420,8 +14403,8 @@ static const struct BattleTowerSpread sExpertBossBattle_Viridian_GaryPreE4Squirt
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_BARRASKEWDA,
-		.nature = NATURE_ADAMANT,
+		.species = SPECIES_BASCULEGION,
+		.nature = NATURE_JOLLY,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
 		.atkIv = 31,
@@ -14433,10 +14416,10 @@ static const struct BattleTowerSpread sExpertBossBattle_Viridian_GaryPreE4Squirt
 		.item = ITEM_MYSTIC_WATER,
 		.moves =
 		{
-			MOVE_WATERFALL,
-			MOVE_CLOSECOMBAT, 
+			MOVE_WAVECRASH,
+			MOVE_LASTRESPECTS, 
 			MOVE_FLIPTURN, 
-			MOVE_PSYCHICFANGS, 
+			MOVE_ZENHEADBUTT, 
 		},
 		.ball = BALL_TYPE_DIVE_BALL,
 		.forSingles = TRUE,
@@ -14648,7 +14631,7 @@ static const struct BattleTowerSpread sExpertBossBattle_Viridian_BrendanFinal[] 
 static const struct BattleTowerSpread sExpertBossBattle_VictoryRoad_AceTrainer1[] =
 {
 	{
-		.species = SPECIES_AMBIPOM,
+		.species = SPECIES_MAUSHOLD,
 		.nature = NATURE_JOLLY,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
@@ -14657,13 +14640,13 @@ static const struct BattleTowerSpread sExpertBossBattle_VictoryRoad_AceTrainer1[
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Technician
-		.item = ITEM_LIFE_ORB, 
+		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Technician
+		.item = ITEM_WIDE_LENS, 
 		.moves =
 		{
-			MOVE_FAKEOUT,
-			MOVE_TAILSLAP, 
-			MOVE_ARMTHRUST,
+			MOVE_POPULATIONBOMB,
+			MOVE_BULLETSEED, 
+			MOVE_UTURN,
 			MOVE_BEATUP, 
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
@@ -14672,7 +14655,7 @@ static const struct BattleTowerSpread sExpertBossBattle_VictoryRoad_AceTrainer1[
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_BRUXISH,
+		.species = SPECIES_VELUZA,
 		.nature = NATURE_JOLLY,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
@@ -14681,13 +14664,13 @@ static const struct BattleTowerSpread sExpertBossBattle_VictoryRoad_AceTrainer1[
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_2, //ABILITY Strong Jaw
-		.item = ITEM_LIFE_ORB, 
+		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Sharpness
+		.item = ITEM_SITRUS_BERRY, 
 		.moves =
 		{
-			MOVE_SWORDSDANCE,
-			MOVE_AQUAFANG, 
-			MOVE_PSYCHICFANGS,
+			MOVE_FILLETAWAY,
+			MOVE_AQUACUTTER, 
+			MOVE_PSYCHOCUT,
 			MOVE_AQUAJET, 
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
@@ -14729,7 +14712,7 @@ static const struct BattleTowerSpread sExpertBossBattle_VictoryRoad_AceTrainer1[
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_2, //ABILITY Super Luck Blademaster
+		.ability = FRONTIER_ABILITY_2, //ABILITY Super Luck Sharpness
 		.item = ITEM_ABSOLITE,
 		.moves =
 		{
@@ -14797,8 +14780,8 @@ static const struct BattleTowerSpread sExpertBossBattle_VictoryRoad_AceTrainer1[
 static const struct BattleTowerSpread sExpertBossBattle_VictoryRoad_AceTrainer2[] =
 {
 	{
-		.species = SPECIES_BRONZONG,
-		.nature = NATURE_CAREFUL,
+		.species = SPECIES_CYCLIZAR,
+		.nature = NATURE_JOLLY,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
 		.atkIv = 31,
@@ -14806,14 +14789,14 @@ static const struct BattleTowerSpread sExpertBossBattle_VictoryRoad_AceTrainer2[
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Levitate
-		.item = ITEM_LEFTOVERS, 
+		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Regenerator
+		.item = ITEM_SITRUS_BERRY, 
 		.moves =
 		{
-			MOVE_STEALTHROCK,
-			MOVE_TELEPORT, 
-			MOVE_GYROBALL,
-			MOVE_EARTHQUAKE, 
+			MOVE_SHEDTAIL,
+			MOVE_KNOCKOFF, 
+			MOVE_BODYSLAM,
+			MOVE_DRAGONCLAW, 
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
 		.forSingles = TRUE,
@@ -14878,14 +14861,14 @@ static const struct BattleTowerSpread sExpertBossBattle_VictoryRoad_AceTrainer2[
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Corrosion
-		.item = ITEM_FOCUS_SASH,
+		.ability = FRONTIER_ABILITY_2, //ABILITY Sniper
+		.item = ITEM_SITRUS_BERRY,
 		.moves =
 		{
 			MOVE_NASTYPLOT, 
 			MOVE_HURRICANE,
 			MOVE_HEATWAVE, 
-			MOVE_SLUDGEBOMB, 
+			MOVE_GIGADRAIN, 
 		},
 		.ball = BALL_TYPE_POKE_BALL,
 		.forSingles = TRUE,
@@ -14917,8 +14900,8 @@ static const struct BattleTowerSpread sExpertBossBattle_VictoryRoad_AceTrainer2[
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_RAPIDASH_G,
-		.nature = NATURE_JOLLY,
+		.species = SPECIES_HATTERENE,
+		.nature = NATURE_MODEST,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
 		.atkIv = 31,
@@ -14926,14 +14909,14 @@ static const struct BattleTowerSpread sExpertBossBattle_VictoryRoad_AceTrainer2[
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Pastel Veil
-		.item = ITEM_CHARCOAL,
+		.ability = FRONTIER_ABILITY_1, //ABILITY Magic Bounce
+		.item = ITEM_LEFTOVERS,
 		.moves =
 		{
-			MOVE_SWORDSDANCE,
-			MOVE_FLAREBLITZ, 
-			MOVE_PLAYROUGH, 
-			MOVE_HIGHHORSEPOWER, 
+			MOVE_CALMMIND,
+			MOVE_DRAININGKISS, 
+			MOVE_PSYSHOCK, 
+			MOVE_MYSTICALFIRE, 
 		},
 		.ball = BALL_TYPE_ULTRA_BALL,
 		.forSingles = TRUE,
@@ -14970,8 +14953,8 @@ static const struct BattleTowerSpread sExpertBossBattle_VictoryRoad_AceTrainer3[
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_AUDINO,
-		.nature = NATURE_BOLD,
+		.species = SPECIES_DONDOZO,
+		.nature = NATURE_CAREFUL,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
 		.atkIv = 31,
@@ -14979,14 +14962,14 @@ static const struct BattleTowerSpread sExpertBossBattle_VictoryRoad_AceTrainer3[
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_2, //ABILITY Regenerator
-		.item = ITEM_AUDINITE, 
+		.ability = FRONTIER_ABILITY_1, //ABILITY Unaware
+		.item = ITEM_LEFTOVERS, 
 		.moves =
 		{
-			MOVE_WISH,
-			MOVE_PROTECT, 
-			MOVE_TOXIC,
-			MOVE_MOONBLAST, 
+			MOVE_BODYPRESS,
+			MOVE_LIQUIDATION, 
+			MOVE_EARTHQUAKE,
+			MOVE_TOXIC, 
 		},
 		.ball = BALL_TYPE_LOVE_BALL,
 		.forSingles = TRUE,
@@ -15042,8 +15025,8 @@ static const struct BattleTowerSpread sExpertBossBattle_VictoryRoad_AceTrainer3[
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_SILVALLY_STEEL,
-		.nature = NATURE_NAIVE,
+		.species = SPECIES_IRONTREADS,
+		.nature = NATURE_JOLLY,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
 		.atkIv = 31,
@@ -15051,16 +15034,16 @@ static const struct BattleTowerSpread sExpertBossBattle_VictoryRoad_AceTrainer3[
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Battle Armor
-		.item = ITEM_LEFTOVERS,
+		.ability = FRONTIER_ABILITY_1, //ABILITY Quark Drive
+		.item = ITEM_BOOSTER_ENERGY,
 		.moves =
 		{
-			MOVE_MULTIATTACK, 
-			MOVE_FLAMETHROWER,
-			MOVE_THUNDERWAVE, 
-			MOVE_PARTINGSHOT, 
+			MOVE_EARTHQUAKE, 
+			MOVE_IRONHEAD,
+			MOVE_KNOCKOFF, 
+			MOVE_WILDCHARGE, 
 		},
-		.ball = BALL_TYPE_POKE_BALL,
+		.ball = BALL_TYPE_ULTRA_BALL,
 		.forSingles = TRUE,
 		.forDoubles = TRUE,
 		.modifyMovesDoubles = FALSE,
@@ -15292,7 +15275,7 @@ static const struct BattleTowerSpread sExpertBossBattle_VictoryRoad_AceTrainer5[
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_VIRIZION,
+		.species = SPECIES_IRONLEAVES,
 		.nature = NATURE_JOLLY,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
@@ -15301,14 +15284,14 @@ static const struct BattleTowerSpread sExpertBossBattle_VictoryRoad_AceTrainer5[
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Justified
+		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Sharpness
 		.item = ITEM_SCOPE_LENS,
 		.moves =
 		{
 			MOVE_SWORDSDANCE,
 			MOVE_LEAFBLADE, 
 			MOVE_SACREDSWORD, 
-			MOVE_STONEEDGE, 
+			MOVE_PSYCHOCUT, 
 		},
 		.ball = BALL_TYPE_ULTRA_BALL,
 		.forSingles = TRUE,
@@ -15402,7 +15385,7 @@ static const struct BattleTowerSpread sExpertBossBattle_VictoryRoad_AceTrainer6[
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Clear Body
+		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Tough Claws
 		.item = ITEM_FOCUS_SASH, 
 		.moves =
 		{
@@ -15474,7 +15457,7 @@ static const struct BattleTowerSpread sExpertBossBattle_VictoryRoad_AceTrainer6[
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Multiscale
+		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Magic Bounce
 		.item = ITEM_EEVIUM_Z,
 		.moves =
 		{
@@ -15718,8 +15701,8 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_LoreleiRain[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_KINGDRA,
-		.nature = NATURE_MILD,
+		.species = SPECIES_IRONBUNDLE,
+		.nature = NATURE_TIMID,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
 		.atkIv = 31,
@@ -15727,14 +15710,14 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_LoreleiRain[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Swift Swim
-		.item = ITEM_MYSTIC_WATER, 
+		.ability = FRONTIER_ABILITY_1, //ABILITY Quark Drive
+		.item = ITEM_BOOSTER_ENERGY, 
 		.moves =
 		{
 			MOVE_HYDROPUMP,
-			MOVE_DRACOBARRAGE, 
-			MOVE_HURRICANE,
-			MOVE_WATERFALL, 
+			MOVE_FREEZEDRY, 
+			MOVE_ICYWIND,
+			MOVE_PROTECT, 
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
 		.forSingles = TRUE,
@@ -15784,7 +15767,7 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_LoreleiRain[] =
 			MOVE_AQUATAIL, 
 			MOVE_EXTREMESPEED, 
 		},
-		.ball = BALL_TYPE_CHERISH_BALL,
+		.ball = BALL_TYPE_GREAT_BALL,
 		.forSingles = TRUE,
 		.forDoubles = TRUE,
 		.modifyMovesDoubles = FALSE,
@@ -15846,7 +15829,7 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_LoreleiHail[] =
 	{
 		.species = SPECIES_GLACEON,
 		.nature = NATURE_MODEST,
-		.level = PLAYER_MAX_LEVEL,
+		.level = 85,
 		.hpIv = 31,
 		.atkIv = 30,
 		.defIv = 31,
@@ -15870,7 +15853,7 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_LoreleiHail[] =
 	{
 		.species = SPECIES_LANDORUS_THERIAN,
 		.nature = NATURE_JOLLY,
-		.level = PLAYER_MAX_LEVEL,
+		.level = 85,
 		.hpIv = 31,
 		.atkIv = 31,
 		.defIv = 31,
@@ -15892,25 +15875,25 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_LoreleiHail[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_BEARTIC,
+		.species = SPECIES_CHIEN_PAO,
 		.nature = NATURE_JOLLY,
-		.level = PLAYER_MAX_LEVEL,
+		.level = 85,
 		.hpIv = 31,
 		.atkIv = 31,
 		.defIv = 31,
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_2, //ABILITY Slush Rush
+		.ability = FRONTIER_ABILITY_1, //ABILITY Sword of Ruin
 		.item = ITEM_FOCUS_SASH, 
 		.moves =
 		{
-			MOVE_ICEHAMMER,
-			MOVE_LIQUIDATION, 
-			MOVE_CLOSECOMBAT,
-			MOVE_BRICKBREAK, 
+			MOVE_ICICLECRASH,
+			MOVE_KNOCKOFF, 
+			MOVE_SACREDSWORD,
+			MOVE_ICESHARD, 
 		},
-		.ball = BALL_TYPE_GREAT_BALL,
+		.ball = BALL_TYPE_DUSK_BALL,
 		.forSingles = TRUE,
 		.forDoubles = TRUE,
 		.modifyMovesDoubles = FALSE,
@@ -15918,7 +15901,7 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_LoreleiHail[] =
 	{
 		.species = SPECIES_TAPU_FINI,
 		.nature = NATURE_MODEST,
-		.level = PLAYER_MAX_LEVEL,
+		.level = 85,
 		.hpIv = 31,
 		.atkIv = 31,
 		.defIv = 31,
@@ -15942,7 +15925,7 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_LoreleiHail[] =
 	{
 		.species = SPECIES_KYUREM_WHITE,
 		.nature = NATURE_TIMID,
-		.level = PLAYER_MAX_LEVEL,
+		.level = 85,
 		.hpIv = 31,
 		.atkIv = 31,
 		.defIv = 31,
@@ -15966,7 +15949,7 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_LoreleiHail[] =
 	{
 		.species = SPECIES_ABOMASNOW,
 		.nature = NATURE_NAIVE,
-		.level = PLAYER_MAX_LEVEL,
+		.level = 85,
 		.hpIv = 31,
 		.atkIv = 30,
 		.defIv = 31,
@@ -16042,8 +16025,8 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_Bruno1[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_ZAMAZENTA,
-		.nature = NATURE_JOLLY,
+		.species = SPECIES_IRONVALIANT,
+		.nature = NATURE_TIMID,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
 		.atkIv = 31,
@@ -16051,14 +16034,14 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_Bruno1[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Serene Grace
-		.item = ITEM_RUSTED_SHIELD,
+		.ability = FRONTIER_ABILITY_1, //ABILITY Quark Drive
+		.item = ITEM_BOOSTER_ENERGY,
 		.moves =
 		{
-			MOVE_BULKUP,
-			MOVE_BODYPRESS, 
-			MOVE_BEHEMOTHBASH, 
-			MOVE_WILDCHARGE, 
+			MOVE_CALMMIND,
+			MOVE_MOONBLAST, 
+			MOVE_PSYSHOCK, 
+			MOVE_SHADOWBALL, 
 		},
 		.ball = BALL_TYPE_ULTRA_BALL,
 		.forSingles = TRUE,
@@ -16104,7 +16087,7 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_Bruno1[] =
 		.moves =
 		{
 			MOVE_SWORDSDANCE, 
-			MOVE_BEHEMOTHBASH,
+			MOVE_BEHEMOTHBLADE,
 			MOVE_CLOSECOMBAT, 
 			MOVE_WILDCHARGE, 
 		},
@@ -16192,8 +16175,8 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_Bruno2[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_ZAMAZENTA,
-		.nature = NATURE_JOLLY,
+		.species = SPECIES_IRONVALIANT,
+		.nature = NATURE_TIMID,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
 		.atkIv = 31,
@@ -16201,14 +16184,14 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_Bruno2[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Shield 
-		.item = ITEM_RUSTED_SHIELD,
+		.ability = FRONTIER_ABILITY_1, //ABILITY Quark Drive
+		.item = ITEM_BOOSTER_ENERGY,
 		.moves =
 		{
-			MOVE_BULKUP,
-			MOVE_BODYPRESS, 
-			MOVE_BEHEMOTHBASH, 
-			MOVE_WILDCHARGE, 
+			MOVE_CALMMIND,
+			MOVE_MOONBLAST, 
+			MOVE_SHADOWBALL, 
+			MOVE_PSYSHOCK, 
 		},
 		.ball = BALL_TYPE_ULTRA_BALL,
 		.forSingles = TRUE,
@@ -16254,7 +16237,7 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_Bruno2[] =
 		.moves =
 		{
 			MOVE_SWORDSDANCE, 
-			MOVE_BEHEMOTHBASH,
+			MOVE_BEHEMOTHBLADE,
 			MOVE_CLOSECOMBAT, 
 			MOVE_WILDCHARGE, 
 		},
@@ -16362,13 +16345,10 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_Agatha1[] =
 			MOVE_UTURN, 
 		},
 		.ball = BALL_TYPE_DUSK_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_ZARUDE,
-		.nature = NATURE_JOLLY,
+		.species = SPECIES_FLUTTERMANE,
+		.nature = NATURE_TIMID,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
 		.atkIv = 31,
@@ -16376,19 +16356,16 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_Agatha1[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Defiant
-		.item = ITEM_PSYCHIC_SEED,
+		.ability = FRONTIER_ABILITY_1, //ABILITY Protosynthesis
+		.item = ITEM_BOOSTER_ENERGY,
 		.moves =
 		{
-			MOVE_BULKUP, 
-			MOVE_DRAINPUNCH,
-			MOVE_KNOCKOFF, 
-			MOVE_POWERWHIP, 
+			MOVE_SHADOWBALL, 
+			MOVE_MOONBLAST,
+			MOVE_MYSTICALFIRE, 
+			MOVE_PSYSHOCK, 
 		},
 		.ball = BALL_TYPE_DUSK_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
 	},
 	{
 		.species = SPECIES_VICTINI,
@@ -16410,9 +16387,6 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_Agatha1[] =
 			MOVE_FOCUSBLAST, 
 		},
 		.ball = BALL_TYPE_ULTRA_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
 	},
 	{
 		.species = SPECIES_CALYREX_SHADOW,
@@ -16438,7 +16412,6 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_Agatha1[] =
 		.forDoubles = TRUE,
 		.modifyMovesDoubles = FALSE,
 	},
-
 };
 
 static const struct BattleTowerSpread sExpertBossBattle_E4_Agatha2[] =
@@ -16469,8 +16442,8 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_Agatha2[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_ZARUDE,
-		.nature = NATURE_JOLLY,
+		.species = SPECIES_FLUTTERMANE,
+		.nature = NATURE_TIMID,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
 		.atkIv = 31,
@@ -16478,14 +16451,14 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_Agatha2[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Defiant
-		.item = ITEM_PSYCHIC_SEED,
+		.ability = FRONTIER_ABILITY_1, //ABILITY Protosynthesis
+		.item = ITEM_BOOSTER_ENERGY,
 		.moves =
 		{
-			MOVE_BULKUP, 
-			MOVE_DRAINPUNCH,
-			MOVE_KNOCKOFF, 
-			MOVE_POWERWHIP, 
+			MOVE_SHADOWBALL, 
+			MOVE_MOONBLAST,
+			MOVE_PSYSHOCK, 
+			MOVE_MYSTICALFIRE, 
 		},
 		.ball = BALL_TYPE_DUSK_BALL,
 		.forSingles = TRUE,
@@ -16595,7 +16568,7 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_Lance1[] =
 //can't remove hazards
 {
 	{
-		.species = SPECIES_DEOXYS_SPEED,
+		.species = SPECIES_GLIMMORA,
 		.nature = NATURE_TIMID,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
@@ -16609,9 +16582,9 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_Lance1[] =
 		.moves =
 		{
 			MOVE_STEALTHROCK,
-			MOVE_SPIKES, 
-			MOVE_PSYCHIC,
-			MOVE_KNOCKOFF, 
+			MOVE_POWERGEM, 
+			MOVE_EARTHPOWER,
+			MOVE_ENERGYBALL, 
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
 		.forSingles = TRUE,
@@ -16677,7 +16650,7 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_Lance1[] =
 		.spDefIv = 31,
 		.spdIv = 31,
 		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Multiscale
-		.item = ITEM_SHARP_BEAK,
+		.item = ITEM_LUM_BERRY,
 		.moves =
 		{
 			MOVE_DRAGONDANCE, 
@@ -16705,7 +16678,7 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_Lance1[] =
 		.moves =
 		{
 			MOVE_ROAROFTIME, 
-			MOVE_FLAMETHROWER,
+			MOVE_FLASHCANNON,
 			MOVE_REST, 
 			MOVE_SLEEPTALK, 
 		},
@@ -16745,7 +16718,7 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_Lance2[] =
 //can't remove hazards
 {
 	{
-		.species = SPECIES_DEOXYS_SPEED,
+		.species = SPECIES_GLIMMORA,
 		.nature = NATURE_TIMID,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
@@ -16759,9 +16732,9 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_Lance2[] =
 		.moves =
 		{
 			MOVE_STEALTHROCK,
-			MOVE_SPIKES, 
-			MOVE_PSYCHIC,
-			MOVE_KNOCKOFF, 
+			MOVE_POWERGEM, 
+			MOVE_SLUDGEWAVE,
+			MOVE_ENERGYBALL, 
 		},
 		.ball = BALL_TYPE_ULTRA_BALL,
 		.forSingles = TRUE,
@@ -16855,7 +16828,7 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_Lance2[] =
 		.moves =
 		{
 			MOVE_ROAROFTIME, 
-			MOVE_FLAMETHROWER,
+			MOVE_FLASHCANNON,
 			MOVE_REST, 
 			MOVE_SLEEPTALK, 
 		},
@@ -16956,7 +16929,7 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_GarySquirtle[] =
 		.item = ITEM_ETERNAMAX_ORB,
 		.moves =
 		{
-			MOVE_DRACOBARRAGE, //illegalish
+			MOVE_DRACOBARRAGE, 
 			MOVE_SLUDGEWAVE, 
 			MOVE_THUNDER, 
 			MOVE_RECOVER, 
@@ -17016,8 +16989,8 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_GarySquirtle[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_METAGROSS,
-		.nature = NATURE_JOLLY,
+		.species = SPECIES_WALKINGWAKE,
+		.nature = NATURE_TIMID,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
 		.atkIv = 31,
@@ -17025,14 +16998,14 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_GarySquirtle[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Clear Body Tough Claws
-		.item = ITEM_METAGROSSITE,
+		.ability = FRONTIER_ABILITY_1, //ABILITY Protosynthesis
+		.item = ITEM_BOOSTER_ENERGY,
 		.moves =
 		{
-			MOVE_METEORMASH,
-			MOVE_ICEPUNCH, 
-			MOVE_THUNDERPUNCH, 
-			MOVE_BULLETPUNCH, 
+			MOVE_HYDROPUMP,
+			MOVE_DRACOBARRAGE, 
+			MOVE_FLAMETHROWER, 
+			MOVE_HURRICANE, 
 		},
 		.ball = BALL_TYPE_ULTRA_BALL,
 		.forSingles = TRUE,
@@ -17089,9 +17062,49 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_GaryBulbasaur[] =
 			MOVE_STONEEDGE, 
 		},
 		.ball = BALL_TYPE_POKE_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
+	},
+	{
+		.species = SPECIES_WALKINGWAKE,
+		.nature = NATURE_TIMID,
+		.level = PLAYER_MAX_LEVEL,
+		.hpIv = 31,
+		.atkIv = 31,
+		.defIv = 31,
+		.spAtkIv = 31,
+		.spDefIv = 31,
+		.spdIv = 31,
+		.ability = FRONTIER_ABILITY_1, //ABILITY Protosynthesis
+		.item = ITEM_BOOSTER_ENERGY,
+		.moves =
+		{
+			MOVE_HYDROPUMP,
+			MOVE_DRACOBARRAGE, 
+			MOVE_FLAMETHROWER, 
+			MOVE_HURRICANE, 
+		},
+		.ball = BALL_TYPE_LOVE_BALL,
+	},
+	{
+		.species = SPECIES_ETERNATUS,
+		.nature = NATURE_TIMID,
+		.level = PLAYER_MAX_LEVEL,
+		.hpIv = 31,
+		.atkIv = 31,
+		.defIv = 31,
+		.spAtkIv = 31,
+		.spDefIv = 31,
+		.spdIv = 31,
+		.ability = FRONTIER_ABILITY_1, //ABILITY Pressure/Levitate
+		.item = ITEM_ETERNAMAX_ORB,
+		.moves =
+		{
+			MOVE_DRACOBARRAGE, 
+			MOVE_SLUDGEWAVE, 
+			MOVE_THUNDER, 
+			MOVE_RECOVER, 
+		},
+		.ball = BALL_TYPE_ULTRA_BALL,
+		.shiny = TRUE,
 	},
 	{
 		.species = SPECIES_XERNEAS,
@@ -17109,59 +17122,10 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_GaryBulbasaur[] =
 		{
 			MOVE_GEOMANCY,
 			MOVE_MOONBLAST, 
-			MOVE_THUNDER, 
+			MOVE_THUNDERBOLT, 
 			MOVE_FOCUSBLAST, 
 		},
 		.ball = BALL_TYPE_LOVE_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_ETERNATUS,
-		.nature = NATURE_TIMID,
-		.level = PLAYER_MAX_LEVEL,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 31,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Pressure/Levitate
-		.item = ITEM_ETERNAMAX_ORB,
-		.moves =
-		{
-			MOVE_DRACOBARRAGE, //illegal ish
-			MOVE_SLUDGEWAVE, 
-			MOVE_THUNDER, 
-			MOVE_RECOVER, 
-		},
-		.ball = BALL_TYPE_ULTRA_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-		.shiny = TRUE,
-	},
-	{
-		.species = SPECIES_NECROZMA_DAWN_WINGS,
-		.nature = NATURE_JOLLY,
-		.level = PLAYER_MAX_LEVEL,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 31,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_1, //ABILITY Prism Armor
-		.item = ITEM_ULTRANECROZIUM_Z,
-		.moves =
-		{
-			MOVE_DRAGONDANCE, 
-			MOVE_PHOTONGEYSER,
-			MOVE_EARTHQUAKE, 
-			MOVE_STONEEDGE, 
-		},
-		.ball = BALL_TYPE_DUSK_BALL,
 		.forSingles = TRUE,
 		.forDoubles = TRUE,
 		.modifyMovesDoubles = FALSE,
@@ -17186,9 +17150,6 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_GaryBulbasaur[] =
 			MOVE_STONEEDGE, 
 		},
 		.ball = BALL_TYPE_MASTER_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
 	},
 };
 
@@ -17229,23 +17190,23 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_GaryCharmander[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_2, //ABILITY Flash Fire/Solar Power
+		.ability = FRONTIER_ABILITY_2, //ABILITY Flash Fire Solar Power Mega
 		.item = ITEM_HOUNDOOMINITE, 
 		.moves =
 		{
-			MOVE_FLAMETHROWER,
-			MOVE_SOLARBEAM, 
-			MOVE_DARKHOLE,
+			MOVE_FIREBLAST,
+			MOVE_DARKHOLE, 
+			MOVE_SOLARBEAM,
 			MOVE_SLUDGEBOMB, 
 		},
-		.ball = BALL_TYPE_DUSK_BALL,
+		.ball = BALL_TYPE_ULTRA_BALL,
 		.forSingles = TRUE,
 		.forDoubles = TRUE,
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_HO_OH,
-		.nature = NATURE_HASTY,
+		.species = SPECIES_KORAIDON,
+		.nature = NATURE_JOLLY,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
 		.atkIv = 31,
@@ -17253,14 +17214,14 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_GaryCharmander[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_2, //ABILITY Regenerator
-		.item = ITEM_CHARTI_BERRY,
+		.ability = FRONTIER_ABILITY_1, //ABILITY Orichalchum Pulse 
+		.item = ITEM_ROSELI_BERRY,
 		.moves =
 		{
-			MOVE_SACREDFIRE,
-			MOVE_BRAVEBIRD, 
-			MOVE_SOLARBEAM, 
-			MOVE_ROOST, 
+			MOVE_SWORDSDANCE,
+			MOVE_FLAREBLITZ, 
+			MOVE_COLLISIONCOURSE, 
+			MOVE_DRACOBARRAGE, 
 		},
 		.ball = BALL_TYPE_ULTRA_BALL,
 		.forSingles = TRUE,
@@ -17329,7 +17290,7 @@ static const struct BattleTowerSpread sExpertBossBattle_E4_GaryCharmander[] =
 		.item = ITEM_ETERNAMAX_ORB,
 		.moves =
 		{
-			MOVE_DRACOBARRAGE, //illegal ish
+			MOVE_DRACOBARRAGE, 
 			MOVE_SLUDGEWAVE, 
 			MOVE_FLAMETHROWER, 
 			MOVE_RECOVER, 
@@ -17351,11 +17312,11 @@ static const struct BattleTowerSpread sHardcoreBattle_Pryce_Rematch[] =
 		.nature = NATURE_QUIET,
 		.level = PLAYER_MAX_LEVEL,
 		.hpIv = 31,
-		.atkIv = 31,
+		.atkIv = 30,
 		.defIv = 31,
-		.spAtkIv = 31,
+		.spAtkIv = 30,
 		.spDefIv = 31,
-		.spdIv = 0,
+		.spdIv = 2,
 		.hpEv = 248,
 		.atkEv = 8,
 		.defEv = 0,
@@ -17368,7 +17329,7 @@ static const struct BattleTowerSpread sHardcoreBattle_Pryce_Rematch[] =
 			MOVE_EARTHPOWER,
 			MOVE_BLIZZARD,
 			MOVE_WOODHAMMER,
-			MOVE_HIDDENPOWER,
+			MOVE_HIDDENPOWER, //fire
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
 		.forSingles = TRUE,
@@ -17785,7 +17746,7 @@ static const struct BattleTowerSpread sHardcoreBossBattle_CapeBrink_DHBattle[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_2, //ABILITY Super Luck, Blademaster Mega
+		.ability = FRONTIER_ABILITY_2, //ABILITY Super Luck, Sharpness Mega
 		.item = ITEM_ABSOLITE, 
 		.moves =
 		{
@@ -18430,7 +18391,7 @@ static const struct BattleTowerSpread sHardcoreBattle_Falkner_Rematch[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_2, //ABILITY Tangled Feet
+		.ability = FRONTIER_ABILITY_1, //ABILITY Frisk
 		.item = ITEM_PIDGEOTITE,
 		.moves =
 		{
@@ -18453,7 +18414,7 @@ static const struct BattleTowerSpread sHardcoreBattle_Falkner_Rematch[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Tinted Lens
+		.ability = FRONTIER_ABILITY_2, //ABILITY Tinted Lens
 		.item = ITEM_CHOICE_SPECS,
 		.moves =
 		{
@@ -19010,7 +18971,7 @@ static const struct BattleTowerSpread sExpertBossBattle_ThreeIsland_Biker3[] =
 			MOVE_HURRICANE,
 			MOVE_PSYCHIC, 
 			MOVE_HEATWAVE,
-			MOVE_ESPERWING, 
+			MOVE_ROOST, 
 		},
 		.ball = BALL_TYPE_HISUIAN_BALL,
 		.forSingles = TRUE,
@@ -21771,8 +21732,8 @@ static const struct BattleTowerSpread sExpertBossBattle_PuzzleBattleShedinja[] =
 		.item = ITEM_HEAVY_DUTY_BOOTS, 
 		.moves =
 		{
-			MOVE_XSCISSOR,
-			MOVE_SHADOWSNEAK, 
+			MOVE_SHADOWSNEAK,
+			MOVE_XSCISSOR, 
 			MOVE_NONE,
 			MOVE_NONE, 
 		},
@@ -22361,7 +22322,7 @@ static const struct BattleTowerSpread sExpertBossBattle_RentalBattleEevee[] =
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Blademaster
+		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY Sharpness
 		.item = ITEM_LIFE_ORB, 
 		.moves =
 		{

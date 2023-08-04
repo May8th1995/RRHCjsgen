@@ -752,4 +752,7 @@ itemdict = {
     "ITEM_FREE_SPACE20" : "",
     "ITEM_FREE_SPACE21" : "",
     "ITEM_FREE_SPACE22" : "",
+    "ITEM_BOOSTER_ENERGY" : "Booster Energy",
+    "ITEM_PUNCHING_GLOVE" : "Punching Glove",
+    
     }

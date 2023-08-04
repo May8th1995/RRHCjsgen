@@ -397,12 +397,13 @@ for mon in mons:
 
 
 for mon in mons:
+    print(mon.species)
     mon.species = speciesDict.speciesdict[mon.species]
 mons.sort(key=lambda x: x.species)
 
 prevSpecies = ""
 with open('hardcore.js', 'w') as f:
-    f.write("var SETDEX_SS = {")
+    f.write("var SETDEX_SV = {")
     for mon in mons:
         if mon.species != prevSpecies:
             if prevSpecies != "":
