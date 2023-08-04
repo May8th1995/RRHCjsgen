@@ -967,5 +967,11 @@ movedict = {
     "MOVE_TORCHSONG" : "Torch Song",
     "MOVE_AQUACUTTER" : "Aqua Cutter",
     "MOVE_FILLETAWAY" : "Fillet Away",
+    "MOVE_ARMORCANNON" : "Armor Cannon",
+    "MOVE_ELECTRODRIFT" : "Electro Drift",
+    "MOVE_AQUASTEP" : "Aqua Step",
+    "MOVE_DIRECLAW" : "Dire Claw",
+    "MOVE_RAGINGBULL" : "Raging Bull",
+    "MOVE_HYDROSTEAM" : "Hydro Steam",
     
 }

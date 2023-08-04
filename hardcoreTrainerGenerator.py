@@ -6,6 +6,8 @@ import dicts.speciesDict as speciesDict
 import dicts.nameDict as nameDict
 import math
 
+mode = "normal"
+
 def gethpmove(mon):
     hptype = ((int(mon.hpiv)%2 + (2*(int(mon.atkiv)%2))+(4*(int(mon.defiv)%2))+(8*(int(mon.speiv)%2))+(16*(int(mon.spaiv)%2))+(32*(int(mon.spdiv)%2)))*5)/21
     hptype = math.floor(hptype)
@@ -83,7 +85,10 @@ class Mon:
     self.move3 = move3
     self.move4 = move4
 
-trainers_file = open('data/hardcore_trainers.h')
+if mode == "normal":
+    trainers_file = open('data/normal_trainers.h')
+else:
+    trainers_file = open('data/hardcore_trainers.h')
 trainers = trainers_file.readlines()
 trainers_file.close
 ivs = [1,2,3,4,5,6]
@@ -128,7 +133,7 @@ for lines in trainers:
             move = 0
         else:
             move = move + 1
-    if '.modifyMovesDoubles' in lines  and  nameDict.namedict[name] != "???":
+    if '.ball =' in lines  and  nameDict.namedict[name] != "???":
         mons.append(Mon(name, species, nature, level, hpiv, atkiv, defiv, spaiv, spdiv, speiv, ability, item, move1, move2, move3, move4))
 
 #check formes
@@ -371,15 +376,26 @@ for mon in mons:
     if mon.move4 == 'MOVE_HIDDENPOWER':
         mon.move4 = gethpmove(mon)
 
-for mon in mons:
-    if mon.level == 'PLAYER_MAX_LEVEL':
-        mon.level = str(levelDict.leveldict[mon.name])
-    elif mon.level == 'ONE_BELOW_PLAYER_MAX_LEVEL':
-        mon.level = str(levelDict.leveldict[mon.name]-1)
-    elif mon.level == 'TWO_BELOW_PLAYER_MAX_LEVEL':
-        mon.level = str(levelDict.leveldict[mon.name]-2)
-    elif mon.level == 'THREE_BELOW_PLAYER_MAX_LEVEL':
-        mon.level = str(levelDict.leveldict[mon.name]-3)
+if mode == "normal":
+    for mon in mons:
+        if mon.level == 'PLAYER_MAX_LEVEL':
+            mon.level = str(levelDict.leveldictNormal[mon.name])
+        elif mon.level == 'ONE_BELOW_PLAYER_MAX_LEVEL':
+            mon.level = str(levelDict.leveldictNormal[mon.name]-1)
+        elif mon.level == 'TWO_BELOW_PLAYER_MAX_LEVEL':
+            mon.level = str(levelDict.leveldictNormal[mon.name]-2)
+        elif mon.level == 'THREE_BELOW_PLAYER_MAX_LEVEL':
+            mon.level = str(levelDict.leveldictNormal[mon.name]-3)
+else:
+    for mon in mons:
+        if mon.level == 'PLAYER_MAX_LEVEL':
+            mon.level = str(levelDict.leveldict[mon.name])
+        elif mon.level == 'ONE_BELOW_PLAYER_MAX_LEVEL':
+            mon.level = str(levelDict.leveldict[mon.name]-1)
+        elif mon.level == 'TWO_BELOW_PLAYER_MAX_LEVEL':
+            mon.level = str(levelDict.leveldict[mon.name]-2)
+        elif mon.level == 'THREE_BELOW_PLAYER_MAX_LEVEL':
+            mon.level = str(levelDict.leveldict[mon.name]-3)
 
 for mon in mons:
     if(mon.ability == "FRONTIER_ABILITY_1"):
@@ -402,7 +418,12 @@ for mon in mons:
 mons.sort(key=lambda x: x.species)
 
 prevSpecies = ""
-with open('hardcore.js', 'w') as f:
+if mode == "normal":
+    file = 'normal.js'
+else:
+    file = 'hardcore.js'
+
+with open(file, 'w') as f:
     f.write("var SETDEX_SV = {")
     for mon in mons:
         if mon.species != prevSpecies:

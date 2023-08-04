@@ -269,4 +269,8 @@ abiltiesdict = {
     "ABILITY_PROTOSYNTHESIS" : "Protosynthesis",
     "ABILITY_SWORDOFRUIN" : "Sword of Ruin",
     "ABILITY_ORICHALCUMPULSE" : "Orichalcum Pulse",
+    "ABILITY_ZEROTOHERO" : "Zero to Hero",
+    "ABILITY_ELECTROMORPHOSIS" : "Electromorphosis",
+    "ABILITY_ROCKYPAYLOAD" : "Rocky Payload",
+    
 }
