@@ -1950,6 +1950,8 @@ static const struct BattleTowerSpread sExpertBossBattle_NuggetBridge_Rocket[] =
 		{
 			MOVE_SLEEPTALK,
 			MOVE_LASTRESORT, 
+			MOVE_NONE, 
+			MOVE_NONE, 
 		},
 		.ball = BALL_TYPE_GREAT_BALL,
 		.forSingles = TRUE,
