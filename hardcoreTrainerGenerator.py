@@ -1,3 +1,4 @@
+import argparse
 import dicts.abilitiesDict as abilityDict
 import dicts.itemDict as itemDict
 import dicts.levelDict as levelDict
@@ -5,8 +6,12 @@ import dicts.movesDict as moveDict
 import dicts.speciesDict as speciesDict
 import dicts.nameDict as nameDict
 import math
+import os
 
-mode = "normal"
+parser = argparse.ArgumentParser()
+parser.add_argument("-m", "--mode", help="normal or hardcore", default="hardcore")
+args = parser.parse_args()
+mode = args.mode
 
 def gethpmove(mon):
     hptype = ((int(mon.hpiv)%2 + (2*(int(mon.atkiv)%2))+(4*(int(mon.defiv)%2))+(8*(int(mon.speiv)%2))+(16*(int(mon.spaiv)%2))+(32*(int(mon.spdiv)%2)))*5)/21
@@ -413,16 +418,16 @@ for mon in mons:
 
 
 for mon in mons:
-    print(mon.species)
     mon.species = speciesDict.speciesdict[mon.species]
 mons.sort(key=lambda x: x.species)
 
 prevSpecies = ""
 if mode == "normal":
-    file = 'normal.js'
+    file = 'sets/normal.js'
 else:
-    file = 'hardcore.js'
+    file = 'sets/hardcore.js'
 
+os.makedirs(os.path.dirname(file), exist_ok=True)
 with open(file, 'w') as f:
     f.write("var SETDEX_SV = {")
     for mon in mons:
