@@ -141,6 +141,10 @@ for lines in trainers:
     if '.ball =' in lines  and  nameDict.namedict[name] != "???":
         mons.append(Mon(name, species, nature, level, hpiv, atkiv, defiv, spaiv, spdiv, speiv, ability, item, move1, move2, move3, move4))
 
+# Pokemon Tower Marowak is not in the trainers.h file so we add it manually
+pokemonTowerMarowak = Mon('Pokemon Tower', 'SPECIES_MAROWAK_A', 'Jolly', '58', '31', '31', '31', '31', '31', '31', 'Bone Zone', 'ITEM_THICK_CLUB', 'MOVE_BONEMERANG', 'MOVE_SHADOWBONE', 'MOVE_FIREPUNCH', 'MOVE_THUNDERPUNCH')
+mons.append(pokemonTowerMarowak)
+
 #check formes
 
 for mon in mons:
@@ -466,6 +470,8 @@ with open(file, 'w') as f:
             if mon.spdiv != "31":
                 f.write('"sd":' + mon.spdiv + ',')
             f.write('}')
+        if (mon.name == "Pokemon Tower"):
+            f.write(',"evs":{"hp":252}')
         f.write('},')
 
         #f.write(',"ivs":{"hp:":' + mon.hpiv + ',"at":' + mon.atkiv+ ',"sa":' + mon.spaiv + ',"sp":' + mon.speiv + ',"df":' + mon.defiv + ',"sd":' + mon.spdiv + "}")

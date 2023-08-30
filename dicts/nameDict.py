@@ -50,6 +50,7 @@ namedict = {
     'RocketHideout Giovanni1' : "Giovanni - Rocket Hideout",
     'Celadon Giovanni1' : "Giovanni - Rocket Hideout",
     'Lavender Channeler' : "Channeler Ruth - Pokemon Tower",
+    'Pokemon Tower' : "Pokemon Tower",
     'Lavender Rocket1' : "Rocket Grunt 1 - Lavender Tower",
     'Lavender Rocket2' : "Rocket Grunt 2 - Lavender Tower",
     'Lavender Rocket3' : "Rocket Grunt 3 - Lavender Tower",
