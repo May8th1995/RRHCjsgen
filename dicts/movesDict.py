@@ -89,7 +89,7 @@ movedict = {
     "MOVE_THUNDER" : "Thunder",
     "MOVE_ROCKTHROW" : "Rock Throw",
     "MOVE_EARTHQUAKE" : "Earthquake",
-    "MOVE_SOULSTRIKE" : "Bolt Strike",
+    "MOVE_SOULSTRIKE" : "Soul Robbery",
     "MOVE_DIG" : "Dig",
     "MOVE_TOXIC" : "Toxic",
     "MOVE_CONFUSION" : "Confusion",
